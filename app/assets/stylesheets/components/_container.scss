@@ -1,9 +1,9 @@
 .container {
-  background: white;
-  box-shadow:;
+  background: black;
 
   .container-home {
-    display-flex:;
+    border-color: black;
+    display:flex;
 
       h1 {
         color:#2F97C1;
@@ -26,43 +26,54 @@
       }
   }
 }
+// .container-signup {
+//   background-color:;
+//   color:;
+//   box-shadow: ;
+//   border-radius:;
 
-.container-signup {
-  background-color:;
-  color:;
-  box-shadow: ;
+//   h1 {
 
-  h1 {
+//   }
 
-  }
+//   h2 {
 
-  h2 {
+//   }
 
-  }
+//   h3 {
 
-  h3 {
+//   }
+// }
 
-  }
-}
+// .container-profile {
+//   display:flex;
 
-.container-profile {
-  display:flex;
+//   .container-infos {
+//     border:;
+//     box-shadow:;
+//   }
 
-  h1 {
+//   h1 {
 
-  }
+//   }
 
-  h2 {
+//   h2 {
 
-  }
+//   }
 
-  h3 {
+//   h3 {
 
 
-  }
+//   }
 
-}
+// }
 
-.container-testskills {
+// .container-skill {
 
-}
+// }
+
+// .container-job-offer {
+//   display:flex;
+//   background-color: white;
+//   box-shadow:;
+// }
