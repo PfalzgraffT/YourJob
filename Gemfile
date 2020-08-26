@@ -24,6 +24,7 @@ gem 'redis', '~> 4.0'
 
 # Mes gems
 gem 'cloudinary', '~> 1.12.0'
+gem 'geocoder'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
