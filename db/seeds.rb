@@ -2,15 +2,23 @@ puts "Create recruiters..."
 magalie = Recruiter.new(
     email: "magalie.laurent@example.com",
     password: "password",
-    company: "best recruit",
+    company: "IT Records",
 )
-magalie.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo.jpg')), filename: 'logo.jpg')
+magalie.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_best_recruit.jpg')), filename: 'logo_best_recruit.jpg')
 magalie.save!
 
 marcel = Recruiter.new(
     email: "jean.marcel@example.com",
     password: "password",
     company: "best recruit",
+)
+marcel.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo.jpg')), filename: 'logo.jpg')
+marcel.save!
+
+michel = Recruiter.new(
+    email: "michel.a@example.com",
+    password: "password",
+    company: "Salamanca IT solutions",
 )
 marcel.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo.jpg')), filename: 'logo.jpg')
 marcel.save!
@@ -174,7 +182,7 @@ front_dev2 = Offer.create!(
     enthusiam: 5,
     flexibility: 3,
     empathy: 1,
-    recruiter: magalie,
+    recruiter: michel,
 )
 
 front_dev3 = Offer.create!(
