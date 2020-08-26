@@ -29,6 +29,7 @@ fullstack_dev = Offer.create!(
     activity: "computer science",
     location: "Marseille",
     contract: "long-term",
+    description: "Join our company, We’re hiring a Junior Developer who will join our Cards and Payments Team based in Marseille. You will work with our latest technologies driving the Future of Finance.",
     interpersonal_skills: 4,
     rigor: 4,
     independence: 3,
@@ -52,6 +53,7 @@ caregiver = Offer.create!(
     activity: "Health",
     location: "Paris",
     contract: "short-term",
+    description: "If you have a passion for caring and the motivation to help us achieve our ambitions, we would love to hear from you. We provide full training",
     interpersonal_skills: 5,
     rigor: 4,
     independence: 3,
@@ -75,6 +77,11 @@ front_dev = Offer.create!(
     activity: "computer science",
     location: "ouagadougou",
     contract: "internship",
+    description: "Your main responsibilities:
+
+    Building detailed custom designed websites
+    Working with designers, developers and our digital team over the lifetime of new and existing projects
+    Communicating with clients where needed",
     interpersonal_skills: 3,
     rigor: 2,
     independence: 3,
@@ -98,6 +105,8 @@ cleaning_operator = Offer.create!(
     activity: "Homecare",
     location: "Paris",
     contract: "long-term",
+    description: "Tasks will include general cleaning duties, including dusting, hoovering, emptying bins, cleaning toilets and kitchens.
+    We will provide full training and a uniform",
     interpersonal_skills: 1,
     rigor: 5,
     independence: 4,
@@ -121,6 +130,12 @@ fullstack_dev2 = Offer.create!(
     activity: "computer science",
     location: "Paris",
     contract: "long-term",
+    description: " What we’re looking for:
+
+    Good hands on Java experience
+    Experience working with RESTful
+    Some experience with JavaScript
+    Exposure to Cloud Tools",
     interpersonal_skills: 4,
     rigor: 4,
     independence: 3,
@@ -144,6 +159,10 @@ fullstack_dev3 = Offer.create!(
     activity: "computer science",
     location: "Paris",
     contract: "long-term",
+    description: " What will you be doing?
+
+    You will ensure that all activities and duties are carried out in full compliance with regulatory requirements, Enterprise Wide Risk Management Framework and internal Barclays Policies and Policy Standards.
+    You will develop components from UI to back end using modern languages and techniques.",
     interpersonal_skills: 4,
     rigor: 4,
     independence: 3,
@@ -167,6 +186,12 @@ front_dev2 = Offer.create!(
     activity: "computer science",
     location: "Nantes",
     contract: "short-term",
+    description: "You will be working on new concepts and developing existing projects that range from small start-ups to large e-commerce sites. 
+    Your personal Skills:
+
+    Excellent communication skills
+    Organised
+    Wants to improve their level of skills",
     interpersonal_skills: 3,
     rigor: 2,
     independence: 3,
@@ -190,6 +215,7 @@ front_dev3 = Offer.create!(
     activity: "computer science",
     location: "Paris",
     contract: "internship",
+    description: "Working closely with the team you will be responsible for taking creative design concepts into working, developed and tested live sites.",
     interpersonal_skills: 3,
     rigor: 2,
     independence: 3,
@@ -213,6 +239,11 @@ back_dev = Offer.create!(
     activity: "computer science",
     location: "Nantes",
     contract: "long-term",
+    description: "The role covers building custom modules, back-end functionality, third-party system integrations through APIs and ongoing site bug fixing.Excellent organisation and planning skills.
+    Requirements :
+    High attention to detail and thorough checking.
+    Excellent communication skills to help explain complex and technical aspects simply.
+    Ability to learn from others and teach other team members.",
     interpersonal_skills: 5,
     rigor: 4,
     independence: 3,
