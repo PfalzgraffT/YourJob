@@ -1,21 +1,29 @@
 .container {
-  background: black;
+  display:flex;
+  background: white;
+  margin: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height:600px;
+  border: white;
+  box-shadow: 1px 1px 50px grey;
 
   .container-home {
-    border-color: black;
+    border-color: grey;
     display:flex;
 
       h1 {
-        color:#2F97C1;
+        color:#3f3d57;
         font-family:'Roboto';
-        font-size: 55px;
+        font-size: 30px;
       }
 
-      h2 {
+      p {
 
         color:#2F97C1;
         font-family:'Roboto';
-        font-size: 25px;
+        font-size: 20px;
       }
 
       h3 {
@@ -23,6 +31,15 @@
         color:#2F97C1;
         font-family:'Roboto';
         font-size: 20px;
+      }
+
+      .log-sign {
+        display:flex;
+
+        img {
+          height:100px;
+          width:200px;
+        }
       }
   }
 }
