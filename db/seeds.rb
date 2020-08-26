@@ -45,6 +45,8 @@ fullstack_dev = Offer.create!(
     enthusiam: 5,
     flexibility: 2,
     empathy: 1,
+    latitude: 43.2961743,
+    longitude: 5.3699525,
     recruiter: magalie,
 )
 
@@ -69,13 +71,15 @@ caregiver = Offer.create!(
     enthusiam: 5,
     flexibility: 2,
     empathy: 5,
+    latitude: 48.8534100,
+    longitude: 2.3488000,
     recruiter: marcel,
 )
 
 front_dev = Offer.create!(
     title: "Frontend dev",
     activity: "computer science",
-    location: "ouagadougou",
+    location: "rue de strasbourg, 44000 Nantes",
     contract: "internship",
     description: "Your main responsibilities:
 
@@ -97,13 +101,15 @@ front_dev = Offer.create!(
     enthusiam: 5,
     flexibility: 3,
     empathy: 1,
+    latitude: 47.218133,
+    longitude: -1.553029,
     recruiter: magalie,
 )
 
 cleaning_operator = Offer.create!(
     title: "Cleaning operator",
     activity: "Homecare",
-    location: "Paris",
+    location: "Lyon",
     contract: "long-term",
     description: "Tasks will include general cleaning duties, including dusting, hoovering, emptying bins, cleaning toilets and kitchens.
     We will provide full training and a uniform",
@@ -122,13 +128,15 @@ cleaning_operator = Offer.create!(
     enthusiam: 3,
     flexibility: 3,
     empathy: 2,
+    latitude: 45.7484600,
+    longitude: 4.8467100,
     recruiter: marcel,
 )
 
 fullstack_dev2 = Offer.create!(
     title: "Fullstack developpeur",
     activity: "computer science",
-    location: "Paris",
+    location: "4 boulevard gustave roch, 44200 Nantes",
     contract: "long-term",
     description: " What we’re looking for:
 
@@ -151,13 +159,15 @@ fullstack_dev2 = Offer.create!(
     enthusiam: 5,
     flexibility: 2,
     empathy: 1,
+    latitude: 47.205306,
+    longitude: -1.54788,
     recruiter: magalie,
 )
 
 fullstack_dev3 = Offer.create!(
     title: "Fullstack engineer",
     activity: "computer science",
-    location: "Paris",
+    location: "Rennes",
     contract: "long-term",
     description: " What will you be doing?
 
@@ -178,15 +188,17 @@ fullstack_dev3 = Offer.create!(
     enthusiam: 5,
     flexibility: 2,
     empathy: 1,
+    latitude: 48.1119800,
+    longitude: -1.6742900,
     recruiter: michel,
 )
 
 front_dev2 = Offer.create!(
     title: "Frontend developpeur",
     activity: "computer science",
-    location: "Nantes",
+    location: "18 boulevard de launay, 44100 Nantes",
     contract: "short-term",
-    description: "You will be working on new concepts and developing existing projects that range from small start-ups to large e-commerce sites. 
+    description: "You will be working on new concepts and developing existing projects that range from small start-ups to large e-commerce sites.
     Your personal Skills:
 
     Excellent communication skills
@@ -207,13 +219,15 @@ front_dev2 = Offer.create!(
     enthusiam: 5,
     flexibility: 3,
     empathy: 1,
+    latitude: 47.21067,
+    longitude: -1.572942,
     recruiter: michel,
 )
 
 front_dev3 = Offer.create!(
     title: "Frontend designer",
     activity: "computer science",
-    location: "Paris",
+    location: "12 rue de la bastille, 44000 Nantes",
     contract: "internship",
     description: "Working closely with the team you will be responsible for taking creative design concepts into working, developed and tested live sites.",
     interpersonal_skills: 3,
@@ -231,13 +245,15 @@ front_dev3 = Offer.create!(
     enthusiam: 5,
     flexibility: 3,
     empathy: 1,
+    latitude: 47.218949,
+    longitude: -1.564874,
     recruiter: marcel,
 )
 
 back_dev = Offer.create!(
     title: "Back-end dev",
     activity: "computer science",
-    location: "Nantes",
+    location: "Strasbourg",
     contract: "long-term",
     description: "The role covers building custom modules, back-end functionality, third-party system integrations through APIs and ongoing site bug fixing.Excellent organisation and planning skills.
     Requirements :
@@ -259,6 +275,8 @@ back_dev = Offer.create!(
     enthusiam: 2,
     flexibility: 2,
     empathy: 2,
+    latitude: 48.5839200,
+    longitude: 7.7455300,
     recruiter: michel,
 )
 
@@ -266,8 +284,8 @@ puts "Create users..."
 john = User.new(
     first_name: "John",
     last_name: "Cena",
-    address: "105 Boston Street, West Newbury",
-    phone_number: "+33 723547793",
+    address: "11 rue la noue bras de fer, 44200 Nantes",
+    phone_number: "0123456789",
     email: "john.bigmuscles@example.com",
     password: "password",
     location: "Paris",
@@ -295,8 +313,8 @@ john.save!
 sophie = User.new(
     first_name: "Sophie",
     last_name: "Labo",
-    address: "Impasse du Néant",
-    phone_number: "+33 639811201",
+    address: "1 place du capitole, 31040 Toulouse",
+    phone_number: "1234567890",
     email: "sophie.labo@example.com",
     password: "password",
     location: "Nantes",
