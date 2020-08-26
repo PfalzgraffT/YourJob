@@ -5,7 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  height:600px;
+  height:700px;
   border: white;
   box-shadow: 1px 1px 50px grey;
 
@@ -14,6 +14,7 @@
     display:flex;
 
     .banner {
+    width:50%;
 
       .logo {
         height: 200px;
@@ -26,48 +27,72 @@
         h3 {
           font-family: 'Changa';
           color:black;
+          width:150px;
         }
       }
 
       .sentences {
-        position: center;
         height:100px;
 
         h1 {
-          color:#3f3d57;
+          color:#1F6684;
           font-family:'Roboto';
           font-size: 30px;
+          font-weight: bold;
+          height:150px;
         }
 
         p {
-          color:#2F97C1;
+          color:#3f3d57;
           font-family:'Roboto';
           font-size: 20px;
-        }
-
-        .btn-ghost {
-          margin: 100px;
+          height:150px;
         }
       }
+
+      .btn-ghost {
+          margin: 200px 150px 0px 50px;
+          font-weight: bold;
+        }
     }
   }
-    .log-sign {
+
+
+    .container-right {
+      width:50%;
+
+      .log-sign {
       display:flex;
 
       img {
       margin: 15px;
+      margin-left:20px;
       height:100px;
       width:200px;
       }
 
       h3 {
-        margin: 10px 0;
+        margin:0;
         color:#2F97C1;
         font-size:15px;
         text-align: center;
       }
     }
   }
+
+      .office-draw {
+        margin: 20px;
+        margin-top: 100px;
+
+        img {
+          margin:150px;
+          width:300px;
+          height:250px;
+        }
+      }
+    }
+
+
 // .container-signup {
 //   background-color:;
 //   color:;
