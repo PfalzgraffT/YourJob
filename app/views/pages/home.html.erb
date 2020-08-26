@@ -1,20 +1,34 @@
 <div class="background"></div>
 
- <div class="container">
+<div class="container">
 
   <div class="container-home">
-    <div>
-      <img src="assets/images/logo_yourjob_copy.png" alt="pic description"><h3>Your Job</h3>
-      <h1>Test your personality to find your first job</h1>
-        <p>Meet the perfect recruiter with your own skills!</p>
+
+    <div class="banner">
+      <div class="logo">
+        <div>
+          <%= image_tag "logo_yourjob_copy.png", alt: "pic description"%>
+          <h3>Your Job</h3></div>
+      </div>
+
+      <div class="sentences">
+        <h1>Test your personality to find your first job</h1>
+        <p>Meet the perfect job with your own skills!</p>
+      </div>
       <div class="btn btn-ghost">Sign up</div>
     </div>
 
+
     <div class="log-sign">
-      <%= image_tag "access_account.svg", alt: "pic description"%>
-      <h3>Signup</h3>
-      <%= image_tag "access_account.svg", alt: "pic description"%>
-      <h3>Login</h3>
+      <div>
+        <%= image_tag "access_account.svg", alt: "pic description"%>
+        <h3>Login</h3>
+      </div>
+
+      <div>
+        <%= image_tag "sign_up.svg", alt: "pic description"%>
+        <h3>Sign up</h3>
+      </div>
     </div>
   </div>
 
