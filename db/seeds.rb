@@ -4,7 +4,7 @@ magalie = Recruiter.new(
     password: "password",
     company: "IT Records",
 )
-magalie.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_best_recruit.jpg')), filename: 'logo_best_recruit.jpg')
+magalie.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_it_records.png')), filename: 'logo_it_records.png')
 magalie.save!
 
 marcel = Recruiter.new(
@@ -12,7 +12,7 @@ marcel = Recruiter.new(
     password: "password",
     company: "best recruit",
 )
-marcel.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo.jpg')), filename: 'logo.jpg')
+marcel.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_best_recruit.jpg')), filename: 'logo_best_recruit.jpg')
 marcel.save!
 
 michel = Recruiter.new(
@@ -20,8 +20,8 @@ michel = Recruiter.new(
     password: "password",
     company: "Salamanca IT solutions",
 )
-marcel.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo.jpg')), filename: 'logo.jpg')
-marcel.save!
+michel.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_salamanca.png')), filename: 'logo_salamanca.png')
+michel.save!
 
 puts "Create offers..."
 fullstack_dev = Offer.create!(
@@ -159,7 +159,7 @@ fullstack_dev3 = Offer.create!(
     enthusiam: 5,
     flexibility: 2,
     empathy: 1,
-    recruiter: marcel,
+    recruiter: michel,
 )
 
 front_dev2 = Offer.create!(
@@ -228,7 +228,7 @@ back_dev = Offer.create!(
     enthusiam: 2,
     flexibility: 2,
     empathy: 2,
-    recruiter: marcel,
+    recruiter: michel,
 )
 
 puts "Create users..."
@@ -258,7 +258,7 @@ john = User.new(
     flexibility: 1,
     empathy: 5,
 )
-john.profile_pic.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/john_profile_pic.png')), filename: 'john_profile_pic.png')
+john.profile_pic.attach(io: File.open(Rails.root.join('db/fixtures/images/users/john_profile_pic.png')), filename: 'john_profile_pic.png')
 john.save!
 
 sophie = User.new(
@@ -287,7 +287,7 @@ sophie = User.new(
     flexibility: 2,
     empathy: 3,
 )
-sophie.profile_pic.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/sophie_profile_pic.png')), filename: 'sophie_profile_pic.png')
+sophie.profile_pic.attach(io: File.open(Rails.root.join('db/fixtures/images/users/sophie_profile_pic.png')), filename: 'sophie_profile_pic.png')
 sophie.save!
 
 puts "Create applications..."
