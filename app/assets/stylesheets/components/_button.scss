@@ -2,7 +2,8 @@
     color:white;
     background-color:#3f3d57;
     font-family:'Roboto';
-    border-radius:2px;
+    border-radius:20px;
+    width: 150px;
 
 
     h2 {
@@ -12,8 +13,9 @@
   }
 
   .btn-ghost:hover {
-    color: black;
-    background-color:white;
+    border:gold;
+    color: white;
+    background-color:#2f97c1;
   }
 
   // .btn-flat {
