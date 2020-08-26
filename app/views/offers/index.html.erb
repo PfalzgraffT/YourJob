@@ -1,17 +1,13 @@
-<div>
-  <%= image_tag "logo_yourjob_copy.png", alt: "pic description"%>
-  <h3>Your Job</h3>
-</div>
-<div>
-  <img src="" name="avatar">
-</div>
+<div class="navbar">
+  <div class="logo">
+      <%= image_tag "logo_yourjob_copy.png", alt: "pic description"%>
+      <h1>Your Job</h1>
+  </div>
 
-<div>
-<p><%#= @profile.domain %>Googleman</p>
-<p><%#= @profile.address %>Nantes</p>
-<p><%#= @profile.contract %>Long-term</p>
-</div>
-
+<<<<<<< HEAD
+  <div class="avatar">
+    <img src="" name="avatar">
+=======
 <div>
   <% @offers.each do |offer| %>
   <div>
@@ -22,12 +18,43 @@
     <%= offer.contract %>
     <%#= stats de compatibilité %>
     <button><%= link_to "See the offer", offer_path(offer), data: { turbolinks: false } %></button>
+>>>>>>> facee0fba8ee646ffadbf6cc12c9aa650a9957fc
   </div>
-  <% end %>
 </div>
 
+<<<<<<< HEAD
+<div class="offers-container">
+  <div class="left-container">
+    <div class="offer-description">
+      <ul>
+        <p><%#= @profile.domain %>Googleman</p>
+        <p><%#= @profile.address %>Nantes</p>
+        <p><%#= @profile.contract %>Long-term</p>
+      </ul>
+    </div>
+  <div class="card-container">
+    <% @offers.each do |offer| %>
+      <div class="card-product">
+        <%= cl_image_tag offer.recruiter.logo.key %>
+        <h2><%= offer.title %></h2>
+        <p><%= offer.recruiter.company %></p>
+        <p><%= offer.location %></p>
+        <p><%= offer.contract %></p>
+        <%#= stats de compatibilité %>
+        <button><%= link_to "See the offer", offer_path(offer) %></button>
+      </div>
+    <% end %>
+  </div>
+  </div>
+  <div id="card-map"
+         style="width: 420px; height: 50vh; background-color: grey;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+=======
 <div id="map"
        style="width: 100%; height: 100vh;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+>>>>>>> facee0fba8ee646ffadbf6cc12c9aa650a9957fc
 </div>
