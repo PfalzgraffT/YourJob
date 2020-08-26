@@ -13,36 +13,61 @@
     border-color: grey;
     display:flex;
 
-      h1 {
-        color:#3f3d57;
-        font-family:'Roboto';
-        font-size: 30px;
-      }
+    .banner {
 
-      p {
-
-        color:#2F97C1;
-        font-family:'Roboto';
-        font-size: 20px;
-      }
-
-      h3 {
-
-        color:#2F97C1;
-        font-family:'Roboto';
-        font-size: 20px;
-      }
-
-      .log-sign {
-        display:flex;
+      .logo {
+        height: 200px;
 
         img {
           height:100px;
-          width:200px;
+          width:100px;
+        }
+
+        h3 {
+          font-family: 'Changa';
+          color:black;
         }
       }
+
+      .sentences {
+        position: center;
+        height:100px;
+
+        h1 {
+          color:#3f3d57;
+          font-family:'Roboto';
+          font-size: 30px;
+        }
+
+        p {
+          color:#2F97C1;
+          font-family:'Roboto';
+          font-size: 20px;
+        }
+
+        .btn-ghost {
+          margin: 100px;
+        }
+      }
+    }
   }
-}
+    .log-sign {
+      display:flex;
+
+      img {
+      margin: 15px;
+      height:100px;
+      width:200px;
+      }
+
+      h3 {
+        margin: 10px 0;
+        color:#2F97C1;
+        font-size:15px;
+        text-align: center;
+      }
+    }
+  }
 // .container-signup {
 //   background-color:;
 //   color:;
