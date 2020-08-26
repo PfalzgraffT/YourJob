@@ -1,0 +1,71 @@
+<%# LOGO tout seul :'( %>
+<%= image_tag "logo_yourjob_copy.png", alt: "pic description"%>
+
+<%# carte profil %>
+<div class=profile-card>
+    <%# haut de la carte %>
+    <div>
+        <%# Name %>
+        <div>
+            <%= @user.first_name %>
+            <%= @user.last_name %>
+        </div>
+        <%# picture + age %>
+        <div>
+            <%= cl_image_tag current_user.profile_pic.key %>
+            <%# <%= @user.age %> %>
+        </div>
+        <%# citation %>
+        <div>
+            <h2>I want to begin my professional life</h2>
+        </div>
+    </div>
+
+    <%# centre de la carte %>
+    <div class="row">
+        <div class="col-sm-3">
+            <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
+                <li class="active"><a href="#vtab1" data-toggle="tab"><i class="far fa-address-card"></i></a></li>
+                <li><a href="#vtab2" data-toggle="tab"><i class="fas fa-business-time"></i></a></li>
+                <li><a href="#vtab3" data-toggle="tab"><i class="fas fa-file-contract"></i></a></li>
+                <li><a href="#vtab4" data-toggle="tab"><i class="fas fa-map-marker-alt"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
+                    <h3>My personal infos</h3>
+                    <p><i class="far fa-envelope"></i> <%= @user.email %></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <%= @user.address %></p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="vtab2">
+                    <h3>My domain</h3>
+                    <p> Mauris imperdiet dignissim ante.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="vtab3">
+                    <h3>Contract type wanted</h3>
+                    <p>Etiam id pharetra quam.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="vtab4">
+                    <h3>Where I look for a job</h3>
+                    <p>Etiam id pharetra quam.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <button><%= link_to "Apply for a new offer", offers_path %></button>
+</div>
+
+<%# OFFRES d'emploi candidaté %>
+<div>
+    <h3>Applications</h3>
+    <%# offer cards %>
+    <% @user.applies.each do |apply| %>
+        <p><%= apply.status %></p>
+        <p><%= apply.offer.title %></p>
+        <p><%= apply.offer.contract %></p>
+        <p><%= apply.offer.recruiter.company %></p>
+        <p><%= apply.offer.location %></p>
+    <% end %>
+</div>
