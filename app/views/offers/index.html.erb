@@ -1,7 +1,9 @@
 <div class="navbar-yourjob">
   <div class="logo">
-      <%= image_tag "logo_yourjob_copy.png"%>
+    <%= image_tag "logo_yourjob_copy.png", alt: "pic description"%>
+    <div class="logo-text">
       <h1>Your Job</h1>
+    </div>
   </div>
   <div class="avatar">
     <img src="" name="avatar">
@@ -12,33 +14,50 @@
   <div class="left-container">
     <div class="offer-description">
       <ul>
-        <%= image_tag "business-time-solid.svg"%><p><%#= @profile.activity %>Googleman</p>
-        <%= image_tag "map-marker-alt-solid.svg"%><p><%#= @profile.location %>Nantes</p>
-        <%= image_tag "file-contract-solid.svg"%><p><%#= @profile.contract %>Long-term</p><%= image_tag "search-solid.svg"%>
+        <div class="icons-offers">
+          <i class="fas fa-business-time icon"></i>
+          <p><%#= @profile.activity %>Googleman</p>
+        </div>
+        <div class="icons-offers">
+          <i class="fas fa-map-marker-alt icon"></i>
+          <p><%#= @profile.location %>Nantes</p>
+        </div>
+        <div class="icons-offers">
+          <i class="fas fa-file-contract icon"></i>
+          <p><%#= @profile.contract %>Long-term</p>
+        </div>
+        <div class="icons-offers">
+          <i class="fas fa-search icon-search"></i>
+        </div>
       </ul>
     </div>
     <div class="card-container">
       <% @offers.each do |offer| %>
         <div class="card-product">
-          <%= cl_image_tag offer.recruiter.logo.key %>
+          <%= cl_image_tag offer.recruiter.logo.key %><p class="bordure_verticale"></p>
           <div class="list-details">
             <h2><%= offer.title %></h2>
             <h4><%= offer.recruiter.company %></h4>
             <br>
-            <p><%= image_tag "map-marker-alt-solid.svg"%><%= offer.location %></p>
-            <p><%= image_tag "file-contract-solid.svg"%><%= offer.contract %></p>
+            <div class="icons-offers">
+              <i class="fas fa-map-marker-alt icon"></i>
+              <p><%= offer.location %></p>
+            </div>
+            <div class="icons-offers">
+              <i class="fas fa-file-contract icon"></i>
+              <p><%= offer.contract %></p>
+            </div>
            </div>
           <%#= stats de compatibilité %>
-
             <div class="testbutton">
-              <%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %>
+              <a class="link"><%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
             </div>
           </div>
       <% end %>
     </div>
   </div>
   <div id="map"
-       style="width: 400px; height: 80vh;"
+       style="width: 550px;" frameborder="0" style="border:0"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
