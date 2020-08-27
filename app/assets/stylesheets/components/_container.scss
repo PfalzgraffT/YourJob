@@ -130,6 +130,10 @@
       font-family:'Roboto';
       font-weight:bold;
       }
+
+      img {
+        width:20px;
+      }
   }
 
   .card-container {
@@ -137,4 +141,36 @@
   }
 }
 
+.list-details {
+  margin-left:20px;
+  width:100%;
+
+    img {
+      width:10px;
+      height:10px;
+    }
+
+    h2 {
+      font-size:20px;
+    }
+
+    h4 {
+      font-size:15px;
+    }
+
+    p {
+      font-size:15px;
+    }
+}
+.testbutton {
+  display:flex;
+  justify-content:flex-end;
+  width:100%;
+  margin-right:20px;
+
+  .btn-ghost {
+    margin:150px 0px 30px 10px;
+
+  }
+}
 

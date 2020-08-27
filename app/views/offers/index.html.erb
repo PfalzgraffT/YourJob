@@ -1,9 +1,8 @@
-<div class="navbar">
+<div class="navbar-yourjob">
   <div class="logo">
-      <%= image_tag "logo_yourjob_copy.png", alt: "pic description"%>
+      <%= image_tag "logo_yourjob_copy.png"%>
       <h1>Your Job</h1>
   </div>
-</div>
   <div class="avatar">
     <img src="" name="avatar">
   </div>
@@ -13,27 +12,32 @@
   <div class="left-container">
     <div class="offer-description">
       <ul>
-        <p><%#= @profile.domain %>Googleman</p>
-        <p><%#= @profile.address %>Nantes</p>
-        <p><%#= @profile.contract %>Long-term</p>
+        <%= image_tag "business-time-solid.svg"%><p><%#= @profile.domain %>Googleman</p>
+        <%= image_tag "map-marker-alt-solid.svg"%><p><%#= @profile.address %>Nantes</p>
+        <%= image_tag "file-contract-solid.svg"%><p><%#= @profile.contract %>Long-term</p><%= image_tag "search-solid.svg"%>
       </ul>
     </div>
     <div class="card-container">
       <% @offers.each do |offer| %>
         <div class="card-product">
           <%= cl_image_tag offer.recruiter.logo.key %>
-          <h2><%= offer.title %></h2>
-          <p><%= offer.recruiter.company %></p>
-          <p><%= offer.location %></p>
-          <p><%= offer.contract %></p>
+          <div class="list-details">
+            <h2><%= offer.title %></h2>
+            <h4><%= offer.recruiter.company %></h4>
+            <br>
+            <p><%= image_tag "map-marker-alt-solid.svg"%><%= offer.location %></p>
+            <p><%= image_tag "file-contract-solid.svg"%><%= offer.contract %></p>
+           </div>
           <%#= stats de compatibilité %>
-          <button><%= link_to "See the offer", offer_path(offer) %></button>
-        </div>
+            <div class="testbutton">
+              <%= link_to "See the offer", offer_path(offer), class:"btn-ghost" %>
+            </div>
+          </div>
       <% end %>
     </div>
   </div>
   <div id="map"
-       style="width: 420px; height: 50vh;"
+       style="width: 700px; height: 100vh;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
