@@ -12,8 +12,8 @@
   <div class="left-container">
     <div class="offer-description">
       <ul>
-        <%= image_tag "business-time-solid.svg"%><p><%#= @profile.domain %>Googleman</p>
-        <%= image_tag "map-marker-alt-solid.svg"%><p><%#= @profile.address %>Nantes</p>
+        <%= image_tag "business-time-solid.svg"%><p><%#= @profile.activity %>Googleman</p>
+        <%= image_tag "map-marker-alt-solid.svg"%><p><%#= @profile.location %>Nantes</p>
         <%= image_tag "file-contract-solid.svg"%><p><%#= @profile.contract %>Long-term</p><%= image_tag "search-solid.svg"%>
       </ul>
     </div>
@@ -29,8 +29,9 @@
             <p><%= image_tag "file-contract-solid.svg"%><%= offer.contract %></p>
            </div>
           <%#= stats de compatibilité %>
+
             <div class="testbutton">
-              <%= link_to "See the offer", offer_path(offer), class:"btn-ghost" %>
+              <%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %>
             </div>
           </div>
       <% end %>
