@@ -7,6 +7,7 @@
   <div class="avatar">
     <img src="" name="avatar">
   </div>
+</div>
 
 <div class="offers-container">
   <div class="left-container">
@@ -17,23 +18,23 @@
         <p><%#= @profile.contract %>Long-term</p>
       </ul>
     </div>
-  <div class="card-container">
-    <% @offers.each do |offer| %>
-      <div class="card-product">
-        <%= cl_image_tag offer.recruiter.logo.key %>
-        <h2><%= offer.title %></h2>
-        <p><%= offer.recruiter.company %></p>
-        <p><%= offer.location %></p>
-        <p><%= offer.contract %></p>
-        <%#= stats de compatibilité %>
-        <button><%= link_to "See the offer", offer_path(offer) %></button>
-      </div>
-    <% end %>
-  </div>
+    <div class="card-container">
+      <% @offers.each do |offer| %>
+        <div class="card-product">
+          <%= cl_image_tag offer.recruiter.logo.key %>
+          <h2><%= offer.title %></h2>
+          <p><%= offer.recruiter.company %></p>
+          <p><%= offer.location %></p>
+          <p><%= offer.contract %></p>
+          <%#= stats de compatibilité %>
+          <button><%= link_to "See the offer", offer_path(offer) %></button>
+        </div>
+      <% end %>
+    </div>
   </div>
   <div id="map"
-         style="width: 420px; height: 50vh;"
-         data-markers="<%= @markers.to_json %>"
-         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+       style="width: 420px; height: 50vh;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
