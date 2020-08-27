@@ -98,14 +98,14 @@
   display:flex;
   justify-content:normal;
   // background: white;
-  // margin: 50px;
+  margin-left: 250px;
   // margin-left: auto;
   // margin-right: auto;
   // width:100%;
 
   .left-container {
-    width:50%;
-    margin-right:20px;
+    width:60%;
+    // margin-left:250px;
   }
 
   .offer-description {
@@ -137,7 +137,7 @@
   }
 
   .card-container {
-    // margin-right: 100%;
+    // margin: 20px;
   }
 }
 
