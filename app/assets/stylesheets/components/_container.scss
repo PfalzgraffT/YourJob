@@ -79,7 +79,6 @@
       }
     }
   }
-
       .office-draw {
         margin: 20px;
         margin-top: 100px;
@@ -91,7 +90,6 @@
         }
       }
     }
-
 
 .offers-container {
   display:flex;
@@ -140,14 +138,27 @@
       .icons-offers {
         display:flex;
         padding: 20px;
+        align-items:center;
 
         .icon {
           margin-right: 20px;
+          // margin-bottom:30px;
           line-height:unset;
+          color:#3f3d57;
+          font-size:40px;
+        }
+
+        .icon-search {
+          margin-right: 20px;
+          // margin-bottom:30px;
+          line-height:unset;
+          color:black;
+          font-size:40px;
         }
 
         p {
           flex-direction:row;
+          // font-size:20px;
       }
     }
   }
@@ -162,10 +173,19 @@
   margin-left:60px;
   width:100%;
 
-    img {
-      width:10px;
-      height:10px;
-    }
+    .icons-offers {
+        display:flex;
+        // padding: 20px;
+        align-items:center;
+
+        .icon {
+          margin-right: 5px;
+          // margin-bottom:30px;
+          line-height:unset;
+          color:#3f3d57;
+          font-size:25px;
+          justify-content:space-between;
+        }
 
     h2 {
       font-size:20px;
@@ -177,7 +197,9 @@
 
     p {
       font-size:15px;
+      color:#1F6684;
     }
+}
 }
 .testbutton {
   display:flex;
