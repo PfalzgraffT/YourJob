@@ -1,73 +1,77 @@
 <div class="all-elements">
-<%# LOGO tout seul :'( %>
-<%= image_tag "logo_yourjob_copy.png", class: "main-logo" %>
+    <%# LOGO tout seul :'( %>
+    <%= image_tag "logo_yourjob_copy.png", class: "main-logo" %>
 
-<%# carte profil %>
-<div class=profile-card>
-    <%# haut de la carte %>
-    <div>
-        <%# Name %>
-        <div>
-            <%= @user.first_name %>
-            <%= @user.last_name %>
+    <%# carte profil %>
+    <div class="profile-card">
+        <%# haut de la carte %>
+        <div class="profile-card-top">
+            <%# Name %>
+            <div class="full-name">
+                <h3><%= @user.first_name %></h3>
+                <h3><%= @user.last_name %></h3>
+            </div>
+            <%# picture + age %>
+            <div class="image-block">
+                <%= cl_image_tag current_user.profile_pic.key, class: "profile-pic" %>
+            </div>
+            <%# citation %>
+            <div class="quote">
+                <h2>I want to begin my</h2>
+                <h2>professional life</h2>
+            </div>
         </div>
-        <%# picture + age %>
-        <div>
-            <%= cl_image_tag current_user.profile_pic.key, class: "profile-pic" %>
-            <%# <%= @user.age %> %>
-        </div>
-        <%# citation %>
-        <div>
-            <h2>I want to begin my professional life</h2>
-        </div>
-    </div>
 
-    <%# centre de la carte %>
-    <div class="row">
-        <div class="col-sm-3">
-            <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked well">
-                <li class="active"><a href="#vtab1" data-toggle="tab"><i class="far fa-address-card"></i></a></li>
-                <li><a href="#vtab2" data-toggle="tab"><i class="fas fa-business-time"></i></a></li>
-                <li><a href="#vtab3" data-toggle="tab"><i class="fas fa-file-contract"></i></a></li>
-                <li><a href="#vtab4" data-toggle="tab"><i class="fas fa-map-marker-alt"></i></a></li>
-            </ul>
-        </div>
-        <div class="col-sm-9">
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
-                    <h3>My personal infos</h3>
-                    <p><i class="far fa-envelope"></i> <%= @user.email %></p>
-                    <p><i class="fas fa-map-marker-alt"></i> <%= @user.address %></p>
-                </div>
-                <div role="tabpanel" class="tab-pane fade in" id="vtab2">
-                    <h3>My domain</h3>
-                    <p><%= @user.activity %></p>
-                </div>
-                <div role="tabpanel" class="tab-pane fade in" id="vtab3">
-                    <h3>Contract type wanted</h3>
-                    <p><%= @user.contract %></p>
-                </div>
-                <div role="tabpanel" class="tab-pane fade in" id="vtab4">
-                    <h3>Where I look for a job</h3>
-                    <p><%= @user.location %></p>
+        <%# centre de la carte %>
+        <div class="row">
+            <div class="col-sm-3">
+                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked">
+                    <li><a href="#vtab1" data-toggle="tab"><i class="far fa-address-card"></i></a></li>
+                    <li><a href="#vtab2" data-toggle="tab"><i class="fas fa-business-time"></i></a></li>
+                    <li><a href="#vtab3" data-toggle="tab"><i class="fas fa-file-contract"></i></a></li>
+                    <li><a href="#vtab4" data-toggle="tab"><i class="fas fa-map-marker-alt"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
+                        <h3>My personal infos</h3>
+                        <p><i class="far fa-envelope"></i> <%= @user.email %></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <%= @user.address %></p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade in" id="vtab2">
+                        <h3>My domain</h3>
+                        <p><%= @user.activity %></p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade in" id="vtab3">
+                        <h3>Contract type wanted</h3>
+                        <p><%= @user.contract %></p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade in" id="vtab4">
+                        <h3>Where I look for a job</h3>
+                        <p><%= @user.location %></p>
+                    </div>
                 </div>
             </div>
         </div>
+    
+        <div class="apply-btn">
+            <%= link_to "Apply for a new offer", offers_path, class:"btn-darkblue" %>
+        </div>
     </div>
 
-  <button><%= link_to "Apply for a new offer", offers_path %></button>
-</div>
-
-<%# OFFRES d'emploi candidaté %>
-<div>
-    <h3>Applications</h3>
-    <%# offer cards %>
-    <% @user.applies.each do |apply| %>
-        <p><%= apply.status %></p>
-        <p><%= apply.offer.title %></p>
-        <p><%= apply.offer.contract %></p>
-        <p><%= apply.offer.recruiter.company %></p>
-        <p><%= apply.offer.location %></p>
-    <% end %>
-</div>
+    <%# OFFRES d'emploi candidaté %>
+    <div class="applications-column">
+        <h3>Applications</h3>
+        <%# offer cards %>
+        <% @user.applies.each do |apply| %>
+            <div class="offer-card">
+                <p><strong><%= apply.offer.title %></strong></p>
+                <p><%= apply.offer.contract %></p>
+                <p><%= apply.offer.recruiter.company %></p>
+                <p><%= apply.offer.location %></p>
+                <p><strong><%= apply.status.capitalize %></strong></p>
+            </div>
+        <% end %>
+    </div>
 </div>
