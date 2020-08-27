@@ -32,7 +32,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 // import "fichier js "
-import initNavTabs from "../components/init_nav_tabs.js"
+import initNavTabs from "../components/init_nav_tabs";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
