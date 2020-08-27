@@ -1,7 +1,9 @@
 <div class="navbar-yourjob">
   <div class="logo">
-      <%= image_tag "logo_yourjob_copy.png"%>
+    <%= image_tag "logo_yourjob_copy.png", alt: "pic description"%>
+    <div class="logo-text">
       <h1>Your Job</h1>
+    </div>
   </div>
   <div class="avatar">
     <img src="" name="avatar">
@@ -12,10 +14,19 @@
   <div class="left-container">
     <div class="offer-description">
       <ul>
-        <div class="icons-offers"><p><%= image_tag "business-time-solid.svg"%><%#= @profile.activity %>Googleman</p></div>
-        <div class="icons-offers"><p><%= image_tag "map-marker-alt-solid.svg"%><%#= @profile.location %>Nantes</p></div>
-        <div class="icons-offers"><p><%= image_tag "file-contract-solid.svg"%><%#= @profile.contract %>Long-term</p></div>
-        <%= image_tag "search-solid.svg"%>
+        <div class="icons-offers">
+          <i class="fas fa-star icon"></i>
+          <p><%#= @profile.activity %>Googleman</p>
+        </div>
+        <div class="icons-offers">
+          <i class="fas fa-star icon"></i>
+          <p><%#= @profile.location %>Nantes</p>
+        </div>
+        <div class="icons-offers">
+          <i class="fas fa-star icon"></i>
+          <p><%#= @profile.contract %>Long-term</p>
+        </div>
+        <i class="fas fa-star icon"></i>
       </ul>
     </div>
     <div class="card-container">
@@ -26,8 +37,8 @@
             <h2><%= offer.title %></h2>
             <h4><%= offer.recruiter.company %></h4>
             <br>
-            <p><%= image_tag "map-marker-alt-solid.svg"%><%= offer.location %></p>
-            <p><%= image_tag "file-contract-solid.svg"%><%= offer.contract %></p>
+            <div class="icons-offers"><p><%= image_tag "map-marker-alt-solid.svg"%><%= offer.location %></p></div>
+            <div class="icons-offers"><p><%= image_tag "file-contract-solid.svg"%><%= offer.contract %></p></div>
            </div>
           <%#= stats de compatibilité %>
             <div class="testbutton">
@@ -38,7 +49,7 @@
     </div>
   </div>
   <div id="map"
-       style="width: 550px; height: 80vh;"
+       style="width: 550px;" frameborder="0" style="border:0"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>

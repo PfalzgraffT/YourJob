@@ -58,7 +58,6 @@
     }
   }
 
-
     .container-right {
       width:50%;
 
@@ -98,7 +97,7 @@
   display:flex;
   justify-content:normal;
   // background: white;
-  margin-left: 140px;
+  margin-left: 150px;
   // margin-left: auto;
   // margin-right: auto;
   // width:100%;
@@ -126,10 +125,11 @@
 
       p {
       align-self:flex-start;
+      flex-direction:row;
       color:white;
       font-family:'Roboto';
       font-weight:bold;
-      padding:10px;
+      margin-right:20px;
 
       }
 
@@ -138,8 +138,16 @@
       }
 
       .icons-offers {
+        display:flex;
+        padding: 20px;
+
+        .icon {
+          margin-right: 20px;
+          line-height:unset;
+        }
+
         p {
-          justify-content:space-between;
+          flex-direction:row;
       }
     }
   }
