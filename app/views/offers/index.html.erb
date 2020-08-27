@@ -12,15 +12,16 @@
   <div class="left-container">
     <div class="offer-description">
       <ul>
-        <%= image_tag "business-time-solid.svg"%><p><%#= @profile.activity %>Googleman</p>
-        <%= image_tag "map-marker-alt-solid.svg"%><p><%#= @profile.location %>Nantes</p>
-        <%= image_tag "file-contract-solid.svg"%><p><%#= @profile.contract %>Long-term</p><%= image_tag "search-solid.svg"%>
+        <div class="icons-offers"><p><%= image_tag "business-time-solid.svg"%><%#= @profile.activity %>Googleman</p></div>
+        <div class="icons-offers"><p><%= image_tag "map-marker-alt-solid.svg"%><%#= @profile.location %>Nantes</p></div>
+        <div class="icons-offers"><p><%= image_tag "file-contract-solid.svg"%><%#= @profile.contract %>Long-term</p></div>
+        <%= image_tag "search-solid.svg"%>
       </ul>
     </div>
     <div class="card-container">
       <% @offers.each do |offer| %>
         <div class="card-product">
-          <%= cl_image_tag offer.recruiter.logo.key %>
+          <%= cl_image_tag offer.recruiter.logo.key %><p class="bordure_verticale"></p>
           <div class="list-details">
             <h2><%= offer.title %></h2>
             <h4><%= offer.recruiter.company %></h4>
@@ -29,16 +30,15 @@
             <p><%= image_tag "file-contract-solid.svg"%><%= offer.contract %></p>
            </div>
           <%#= stats de compatibilité %>
-
             <div class="testbutton">
-              <%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %>
+              <a class="link"><%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
             </div>
           </div>
       <% end %>
     </div>
   </div>
   <div id="map"
-       style="width: 400px; height: 80vh;"
+       style="width: 550px; height: 80vh;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
