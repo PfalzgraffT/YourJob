@@ -11,7 +11,7 @@
 
   p.bordure_verticale {
   height: 150px;
-  padding-right: 30px;
+  padding-right: 0px;
   border-right: 1px solid black;
   }
 }
@@ -19,6 +19,7 @@
 .card-product img {
   height: auto;
   width: 200px;
+  text-align:center;
   object-fit: cover;
 }
 
