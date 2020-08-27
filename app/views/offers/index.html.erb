@@ -15,18 +15,20 @@
     <div class="offer-description">
       <ul>
         <div class="icons-offers">
-          <i class="fas fa-star icon"></i>
+          <i class="fas fa-business-time icon"></i>
           <p><%#= @profile.activity %>Googleman</p>
         </div>
         <div class="icons-offers">
-          <i class="fas fa-star icon"></i>
+          <i class="fas fa-map-marker-alt icon"></i>
           <p><%#= @profile.location %>Nantes</p>
         </div>
         <div class="icons-offers">
-          <i class="fas fa-star icon"></i>
+          <i class="fas fa-file-contract icon"></i>
           <p><%#= @profile.contract %>Long-term</p>
         </div>
-        <i class="fas fa-star icon"></i>
+        <div class="icons-offers">
+          <i class="fas fa-search icon-search"></i>
+        </div>
       </ul>
     </div>
     <div class="card-container">
@@ -37,8 +39,14 @@
             <h2><%= offer.title %></h2>
             <h4><%= offer.recruiter.company %></h4>
             <br>
-            <div class="icons-offers"><p><%= image_tag "map-marker-alt-solid.svg"%><%= offer.location %></p></div>
-            <div class="icons-offers"><p><%= image_tag "file-contract-solid.svg"%><%= offer.contract %></p></div>
+            <div class="icons-offers">
+              <i class="fas fa-map-marker-alt icon"></i>
+              <p><%= offer.location %></p>
+            </div>
+            <div class="icons-offers">
+              <i class="fas fa-file-contract icon"></i>
+              <p><%= offer.contract %></p>
+            </div>
            </div>
           <%#= stats de compatibilité %>
             <div class="testbutton">
