@@ -1,5 +1,6 @@
+<div class="all-elements">
 <%# LOGO tout seul :'( %>
-<%= image_tag "logo_yourjob_copy.png", alt: "pic description"%>
+<%= image_tag "logo_yourjob_copy.png", class: "main-logo" %>
 
 <%# carte profil %>
 <div class=profile-card>
@@ -12,7 +13,7 @@
         </div>
         <%# picture + age %>
         <div>
-            <%= cl_image_tag current_user.profile_pic.key %>
+            <%= cl_image_tag current_user.profile_pic.key, class: "profile-pic" %>
             <%# <%= @user.age %> %>
         </div>
         <%# citation %>
@@ -40,15 +41,15 @@
                 </div>
                 <div role="tabpanel" class="tab-pane fade in" id="vtab2">
                     <h3>My domain</h3>
-                    <p> Mauris imperdiet dignissim ante.</p>
+                    <p><%= @user.activity %></p>
                 </div>
                 <div role="tabpanel" class="tab-pane fade in" id="vtab3">
                     <h3>Contract type wanted</h3>
-                    <p>Etiam id pharetra quam.</p>
+                    <p><%= @user.contract %></p>
                 </div>
                 <div role="tabpanel" class="tab-pane fade in" id="vtab4">
                     <h3>Where I look for a job</h3>
-                    <p>Etiam id pharetra quam.</p>
+                    <p><%= @user.location %></p>
                 </div>
             </div>
         </div>
@@ -68,4 +69,5 @@
         <p><%= apply.offer.recruiter.company %></p>
         <p><%= apply.offer.location %></p>
     <% end %>
+</div>
 </div>
