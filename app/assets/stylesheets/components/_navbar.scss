@@ -1,12 +1,12 @@
 .navbar-yourjob {
-
   display:flex;
+  justify-content:space-between;
   height:120px;
   background-color: white;
   opacity:1;
 
     .logo {
-      margin-left:50px;
+      margin-left:20px;
       margin-top: 20px;
         img {
           height:70px;
@@ -19,6 +19,11 @@
           width:150px;
           font-size:20px;
         }
+      }
+
+      .avatar {
+      margin-right:30px;
+      margin-top: 10px;
       }
     }
 

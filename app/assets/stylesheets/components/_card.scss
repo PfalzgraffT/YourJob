@@ -8,11 +8,18 @@
   align-items: center;
   margin-top:20px;
   margin-left:20px;
+
+  p.bordure_verticale {
+  height: 150px;
+  padding-right: 0px;
+  border-right: 1px solid black;
+  }
 }
 
 .card-product img {
   height: auto;
   width: 200px;
+  text-align:center;
   object-fit: cover;
 }
 
@@ -35,8 +42,5 @@
   padding: 16px;
 }
 
-#map {
-  margin:30px;
-  margin-top:90px;
-}
+
 
