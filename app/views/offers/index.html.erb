@@ -27,7 +27,7 @@
           <p><%= offer.location %></p>
           <p><%= offer.contract %></p>
           <%#= stats de compatibilité %>
-          <button><%= link_to "See the offer", offer_path(offer) %></button>
+          <button><%= link_to "See the offer", offer_path(offer), data: { turbolinks: false } %></button>
         </div>
       <% end %>
     </div>
