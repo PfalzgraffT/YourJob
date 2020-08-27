@@ -48,7 +48,9 @@
               <p><%= offer.contract %></p>
             </div>
            </div>
-          <%#= stats de compatibilité %>
+           <div>
+             <h3><%= offer.matching_percentage %>%</h3>
+           </div>
             <div class="testbutton">
               <a class="link"><%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
             </div>
