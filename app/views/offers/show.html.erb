@@ -1,26 +1,39 @@
-<div>
-  <%= image_tag "logo_yourjob_copy.png", alt: "pic description"%>
-  <h3>Your Job</h3>
-</div>
-<div>
-  <img src="" name="avatar">
-</div>
-
-<div>
-  <%= @offer.title %>
-  <%#= stats de compatibilité %>
-  <div>
-    <%= @offer.description %>
+<div class="navbar-yourjob">
+  <div class="logo">
+    <%= image_tag "logo_yourjob_copy.png", alt: "pic description"%>
+    <div class="logo-text">
+      <h1>Your Job</h1>
+    </div>
   </div>
-  <div>
-
-    <button><%= link_to "Apply", offer_path(@offer) %></button>
+  <div class="avatar">
+    <%= cl_image_tag current_user.profile_pic.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
   </div>
+</div>
 
-  <div id="map"
-    style="width: 100%; height: 100vh;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+<div class="flex-container">
+  <div class="profile-card">
+        <%# haut de la carte %>
+        <div class="profile-card-top">
+            <%# Name %>
+            <div class="full-name">
+              <%= @offer.title %>
+            </div>
+
+
+            <%# citation %>
+            <div class="quote">
+              <%= @offer.description %>
+            </div>
+        </div>
+    <div class="testbutton">
+      <a class="link"><%= link_to "Apply", offer_path(@offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
+    </div>
+    </div>
+    <div id="map"
+      style="width: 100%; height: 100vh;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>
 
