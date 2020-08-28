@@ -111,7 +111,7 @@
   // width:100%;
 
   .left-container {
-    width:60%;
+    width:100%;
     // margin-left:250px;
   }
 
@@ -213,20 +213,39 @@
 }
 .testbutton {
   display:flex;
-  justify-content:flex-end;
+  flex-direction:column;
+  text-align:center;
+  align-items:center;
   width:100%;
-  margin-right:20px;
 
   a.btn-ghost {
-    margin:150px 0px 30px 10px;
+    margin:30px 50px;
     text-decoration: none;
+    // margin-bottom:50px;
 
   }
+  .compatibility {
+  // margin-top:40px;
+  // text-align:center;
+
+    h3 {
+      font-size:30px;
+      color:#3f3d57;
+    }
+  }
+}
+
+
+.flex-container {
+  display:flex;
+  position:sticky;
+  right:0;
 }
 
 .fixed-map {
   position:sticky;
   top:0;
+  margin-right:10px;
 }
 
 .homebutton {
