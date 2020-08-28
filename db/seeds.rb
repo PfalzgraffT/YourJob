@@ -16,7 +16,7 @@ magalie.save!
 marcel = Recruiter.new(
     email: "jean.marcel@example.com",
     password: "password",
-    company: "best recruit",
+    company: "Best Recruit",
 )
 marcel.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_best_recruit.jpg')), filename: 'logo_best_recruit.jpg')
 marcel.save!
@@ -32,9 +32,9 @@ michel.save!
 puts "Create offers..."
 fullstack_dev = Offer.create!(
     title: "Fullstack dev",
-    activity: "computer science",
+    activity: "Computer Science",
     location: "Marseille",
-    contract: "long-term",
+    contract: "Long-term",
     description: "Join our company, We’re hiring a Junior Developer who will join our Cards and Payments Team based in Marseille. You will work with our latest technologies driving the Future of Finance.",
     interpersonal_skills: 4,
     rigor: 4,
@@ -60,7 +60,7 @@ caregiver = Offer.create!(
     title: "Caregiver",
     activity: "Health",
     location: "Paris",
-    contract: "short-term",
+    contract: "Long-term",
     description: "If you have a passion for caring and the motivation to help us achieve our ambitions, we would love to hear from you. We provide full training",
     interpersonal_skills: 5,
     rigor: 4,
@@ -84,9 +84,9 @@ caregiver = Offer.create!(
 
 front_dev = Offer.create!(
     title: "Frontend dev",
-    activity: "computer science",
-    location: "rue de strasbourg, 44000 Nantes",
-    contract: "internship",
+    activity: "Computer Science",
+    location: "Rue de strasbourg, 44000 Nantes",
+    contract: "Long-term",
     description: "Your main responsibilities:
 
     Building detailed custom designed websites
@@ -114,9 +114,9 @@ front_dev = Offer.create!(
 
 cleaning_operator = Offer.create!(
     title: "Cleaning operator",
-    activity: "Homecare",
+    activity: "Health",
     location: "Lyon",
-    contract: "long-term",
+    contract: "Long-term",
     description: "Tasks will include general cleaning duties, including dusting, hoovering, emptying bins, cleaning toilets and kitchens.
     We will provide full training and a uniform",
     interpersonal_skills: 1,
@@ -141,9 +141,9 @@ cleaning_operator = Offer.create!(
 
 fullstack_dev2 = Offer.create!(
     title: "Fullstack developpeur",
-    activity: "computer science",
+    activity: "Computer Science",
     location: "4 boulevard gustave roch, 44200 Nantes",
-    contract: "long-term",
+    contract: "Long-term",
     description: " What we’re looking for:
 
     Good hands on Java experience
@@ -172,9 +172,9 @@ fullstack_dev2 = Offer.create!(
 
 fullstack_dev3 = Offer.create!(
     title: "Fullstack engineer",
-    activity: "computer science",
-    location: "Rennes",
-    contract: "long-term",
+    activity: "Computer Science",
+    location: "Nantes",
+    contract: "Long-term",
     description: " What will you be doing?
 
     You will ensure that all activities and duties are carried out in full compliance with regulatory requirements, Enterprise Wide Risk Management Framework and internal Barclays Policies and Policy Standards.
@@ -201,9 +201,9 @@ fullstack_dev3 = Offer.create!(
 
 front_dev2 = Offer.create!(
     title: "Frontend developpeur",
-    activity: "computer science",
+    activity: "Computer Science",
     location: "18 boulevard de launay, 44100 Nantes",
-    contract: "short-term",
+    contract: "Long-term",
     description: "You will be working on new concepts and developing existing projects that range from small start-ups to large e-commerce sites.
     Your personal Skills:
 
@@ -232,9 +232,9 @@ front_dev2 = Offer.create!(
 
 front_dev3 = Offer.create!(
     title: "Frontend designer",
-    activity: "computer science",
+    activity: "Computer Science",
     location: "12 rue de la bastille, 44000 Nantes",
-    contract: "internship",
+    contract: "Long-term",
     description: "Working closely with the team you will be responsible for taking creative design concepts into working, developed and tested live sites.",
     interpersonal_skills: 3,
     rigor: 2,
@@ -258,9 +258,9 @@ front_dev3 = Offer.create!(
 
 back_dev = Offer.create!(
     title: "Back-end dev",
-    activity: "computer science",
+    activity: "Computer Science",
     location: "Strasbourg",
-    contract: "long-term",
+    contract: "Long-term",
     description: "The role covers building custom modules, back-end functionality, third-party system integrations through APIs and ongoing site bug fixing.Excellent organisation and planning skills.
     Requirements :
     High attention to detail and thorough checking.
@@ -295,7 +295,7 @@ john = User.new(
     email: "john.bigmuscles@example.com",
     password: "password",
     location: "Paris",
-    activity: "health",
+    activity: "Health",
     contract: "Long-term",
     interpersonal_skills: 3,
     rigor: 5,
@@ -324,7 +324,7 @@ sophie = User.new(
     email: "sophie.labo@example.com",
     password: "password",
     location: "Nantes",
-    activity: "computer science",
+    activity: "Computer Science",
     contract: "Long-term",
     interpersonal_skills: 3,
     rigor: 3,
@@ -349,30 +349,30 @@ puts "Create applications..."
 application_dev_sophie = Apply.create!(
     user: sophie,
     offer: fullstack_dev,
-    status: "pending",
+    status: "Pending",
 )
 
 application_front_sophie = Apply.create!(
     user: sophie,
     offer: front_dev,
-    status: "pending",
+    status: "Pending",
 )
 
 application_home_sophie = Apply.create!(
     user: sophie,
     offer: cleaning_operator,
-    status: "pending",
+    status: "Pending",
 )
 
 application_care_john = Apply.create!(
     user: john,
     offer: caregiver,
-    status: "pending",
+    status: "Pending",
 )
 
 application_home_john = Apply.create!(
     user: john,
     offer: cleaning_operator,
-    status: "pending",
+    status: "Pending",
 )
 puts "Done!"
