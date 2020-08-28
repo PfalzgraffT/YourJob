@@ -95,7 +95,7 @@
           height:850px;
           position: absolute;
           top: -25px;
-          right: 0px;
+          right: -170px;
           margin: 0;
         }
       }
@@ -105,22 +105,23 @@
   display:flex;
   justify-content:normal;
   // background: white;
-  margin-left: 160px;
+  // margin-left: 160px;
   // margin-left: auto;
   // margin-right: auto;
   // width:100%;
 
   .left-container {
-    width:60%;
-    // margin-left:250px;
+    width:100%;
+    margin:0 20px;
   }
 
   .offer-description {
-
+    position:sticky;
+    top:140px;
+    z-index:10;
       ul {
         color:white;
         display:flex;
-        margin:20px;
         width:100%;
         height:60px;
         margin-right:100px;
@@ -175,7 +176,7 @@
 }
 
   .card-container {
-    // margin: 20px;
+
   }
 }
 
@@ -213,9 +214,48 @@
 }
 .testbutton {
   display:flex;
-  justify-content:flex-end;
+  flex-direction:column;
+  text-align:center;
+  align-items:center;
   width:100%;
-  margin-right:20px;
+
+  a.btn-ghost {
+    margin:30px 50px;
+    text-decoration: none;
+    // margin-bottom:50px;
+
+  }
+  .compatibility {
+  // margin-top:40px;
+  // text-align:center;
+
+    h3 {
+      font-size:30px;
+      color:#3f3d57;
+    }
+  }
+}
+
+
+.flex-container {
+  display:flex;
+  // right:0;
+  // top:0;
+}
+
+.fixed-map {
+    right:20px;
+    }
+      #map {
+      position:fixed;
+      top:140px;
+    }
+
+.homebutton {
+  display:flex;
+  justify-content:flex-start;
+  width:100%;
+  margin-left:20px;
 
   a.btn-ghost {
     margin:150px 0px 30px 10px;
@@ -223,9 +263,3 @@
 
   }
 }
-
-.fixed-map {
-  position:sticky;
-  top:0;
-}
-
