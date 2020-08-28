@@ -1,3 +1,9 @@
+puts "cleaning DB"
+Apply.delete_all
+User.delete_all
+Offer.delete_all
+Recruiter.delete_all
+
 puts "Create recruiters..."
 magalie = Recruiter.new(
     email: "magalie.laurent@example.com",
