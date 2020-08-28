@@ -41,6 +41,7 @@
               <h2><%= offer.title %></h2>
               <h4><%= offer.recruiter.company %></h4>
               <h5><%= offer.activity %></h5>
+
               <div class="icons-offers">
                 <i class="fas fa-map-marker-alt icon"></i>
                 <p><%= offer.location %></p>
@@ -50,22 +51,22 @@
                 <p><%= offer.contract %></p>
               </div>
              </div>
-            <div class="testbutton">
-              <div class="compatibility">
-                <h3><%= offer.matching_percentage %>%</h3>
-              </div>
-              <a class="link"><%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
+
+              <div class="testbutton">
+                <div class="compatibility">
+                  <h3><%= offer.matching_percentage %>%</h3>
+                </div>
+                <a class="link"><%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
             </div>
           </div>
         <% end %>
       <% end %>
+      </div>
     </div>
-
   </div>
-</div>
   <div class="fixed-map">
     <div id="map"
-         style="width: 550px;" frameborder="0" style="border:0"
+         style="width: 600px;" frameborder="0" style="border:0"
          data-markers="<%= @markers.to_json %>"
          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>

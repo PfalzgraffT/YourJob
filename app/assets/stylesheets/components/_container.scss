@@ -105,22 +105,23 @@
   display:flex;
   justify-content:normal;
   // background: white;
-  margin-left: 160px;
+  // margin-left: 160px;
   // margin-left: auto;
   // margin-right: auto;
   // width:100%;
 
   .left-container {
     width:100%;
-    // margin-left:250px;
+    margin:0 20px;
   }
 
   .offer-description {
-
+    position:sticky;
+    top:140px;
+    z-index:10;
       ul {
         color:white;
         display:flex;
-        margin:20px;
         width:100%;
         height:60px;
         margin-right:100px;
@@ -175,7 +176,7 @@
 }
 
   .card-container {
-    // margin: 20px;
+
   }
 }
 
@@ -238,15 +239,17 @@
 
 .flex-container {
   display:flex;
-  position:sticky;
-  right:0;
+  // right:0;
+  // top:0;
 }
 
 .fixed-map {
-  position:sticky;
-  top:0;
-  margin-right:10px;
-}
+    right:20px;
+    }
+      #map {
+      position:fixed;
+      top:140px;
+    }
 
 .homebutton {
   display:flex;
