@@ -15,16 +15,17 @@
         <%# haut de la carte %>
         <div class="profile-card-top">
             <%# Name %>
-            <div class="full-name">
-              <%= @offer.title %>
+            <div class="full-name" style="color:#3a8fb1;">
+              <h1><%= @offer.title %></h1>
             </div>
 
 
             <%# citation %>
-            <div class="quote">
-              <%= @offer.description %>
+            <div class="quote"  style="background-color:#3a8fb1; border-radius: 10px; color:white;">
+              <h2><%= @offer.description %></h2>
             </div>
         </div>
+    </div>
     <div class="testbutton">
       <a class="link"><%= link_to "Apply", offer_path(@offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
     </div>
@@ -35,5 +36,5 @@
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
-</div>
+
 
