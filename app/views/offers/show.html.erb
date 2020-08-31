@@ -1,13 +1,13 @@
 <div class="navbar-yourjob" style="box-shadow: 10px 3px 25px #bababa;  justify-content:space-between;">
   <div class="logo">
-    <%= image_tag "logo_yourjob_copy.png" %>
+    <%= link_to image_tag("logo_yourjob_copy.png"), root_path %>
     <div class="logo-text">
       <h1>Your Job</h1>
     </div>
   </div>
 
   <div class="avatar">
-    <%= cl_image_tag current_user.profile_pic.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    <%= link_to cl_image_tag(current_user.profile_pic.key, class: "avatar dropdown-toggle", id: "navbarDropdown", 'aria-haspopup': true, 'aria-expanded': false), root_path %>
   </div>
 </div>
 
