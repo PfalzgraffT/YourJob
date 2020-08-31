@@ -26,5 +26,6 @@ class OffersController < ApplicationController
         lng: @offer.longitude
       }
     ]
+    @already_applied = current_user.applies.where(offer_id: @offer).exists?
   end
 end
