@@ -135,6 +135,14 @@
     margin: 30px auto;
     padding: 1px;
     box-shadow: 10px 0 15px rgba(0,0,0,0.2);
+    
+    p {
+        line-height: 10px;
+    }
+
+    .status-apply {
+        font-style: italic;
+    }
 }
 
 .company-logo-infos {
@@ -158,12 +166,12 @@
     }
 }
 
-.offer-card p {
-    line-height: 10px;
-}
-
 .colored-text {
     color: #1F6684;
+
+    i {
+        padding-right: 2px;
+    }
 }
 
 .offer-card:hover {
