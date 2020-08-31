@@ -346,23 +346,23 @@ sophie.profile_pic.attach(io: File.open(Rails.root.join('db/fixtures/images/user
 sophie.save!
 
 puts "Create applications..."
-application_dev_sophie = Apply.create!(
-    user: sophie,
-    offer: fullstack_dev,
-    status: "Pending",
-)
+#application_dev_sophie = Apply.create!(
+ #   user: sophie,
+ #   offer: fullstack_dev,
+ #   status: "Pending",
+#)
 
-application_front_sophie = Apply.create!(
-    user: sophie,
-    offer: front_dev,
-    status: "Pending",
-)
+#application_front_sophie = Apply.create!(
+#    user: sophie,
+#    offer: front_dev,
+#    status: "Pending",
+#)
 
-application_home_sophie = Apply.create!(
-    user: sophie,
-    offer: cleaning_operator,
-    status: "Pending",
-)
+#application_home_sophie = Apply.create!(
+#    user: sophie,
+#    offer: cleaning_operator,
+#    status: "Pending",
+#)
 
 application_care_john = Apply.create!(
     user: john,
