@@ -30,16 +30,10 @@
     background: white;
     margin: 10px auto 1% 1%;
     width: 65%;
-    height: 650px;
-    border: white;
+    height: 670px;
     box-shadow: 10px 10px 25px 10px rgba(0,0,0,0.21);
     flex-direction: column;
     border-radius: 20px 20px 20px 20px;
-
-    // font style
-    .full-name {
-        text-align: right;
-    }
 
     h1 {
       color:#3f3d57;
@@ -64,41 +58,42 @@
     h4 {
       font-style:oblique;
     }
-
-    h5 {
-        color:#3f3d57;
-        font-family:'Roboto';
-        font-size: 40px;
-        font-weight: bold;
-        line-height: 0.7em;
-    }
 }
 
 .profile-card-top {
-
     display: flex;
     background:white;
-    justify-content: space-between;
-    position: relative;
+    // justify-content: space-between;
+    // position: relative;
     height: 250px;
     border-radius:20px 20px 0 20px;
 
     .quote {
         align-self: flex-end;
-        margin-left: 10%;
+        margin-left:20px;
+        margin-top: 20px;
         border-left: solid 4px #2F97C1;
         padding-left: 40px;
+
+        h5 {
+        color:#3f3d57;
+        font-family:'Roboto';
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 0.7em;
+        }
       }
 
     .full-name {
-        position: absolute;
-        right: 27%;
+      margin-left:20px;
+      color:#2F97C1;
+      height:130px;
+      // text-align:center;
     }
 
     .image-block {
         display: flex;
         justify-content: flex-end;
-
     }
 }
 
@@ -136,7 +131,7 @@
 .offer-card {
     color: white;
     text-align: center;
-    background-color: #85d3f2;
+    background-color:#85d3f2;
     margin: 30px auto;
     padding: 1px;
 }
@@ -146,5 +141,5 @@
 }
 
 .offer-card:hover {
-    background-color: #3f3d57;
+    background-color:#3f3d57;
 }
