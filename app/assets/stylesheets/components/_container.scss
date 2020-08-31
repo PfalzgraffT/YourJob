@@ -112,12 +112,11 @@
 
   .left-container {
     width:100%;
-    margin:0 20px;
   }
 
   .offer-description {
     position:sticky;
-    top:140px;
+    top: 100px;
     z-index:10;
       ul {
         color:white;
@@ -125,12 +124,12 @@
         width:100%;
         height:60px;
         margin-right:100px;
-        margin-top:20px;
+        // margin-top:20px;
         list-style-type:none;
         display:flex;
         justify-content:space-between;
         background-color:#2f97c1;
-        border-radius:10px;
+
 
       p {
       align-self:flex-start;
@@ -156,7 +155,7 @@
           // margin-bottom:30px;
           line-height:unset;
           color:#3f3d57;
-          font-size:40px;
+          font-size:20px;
         }
 
         .icon-search {
@@ -164,7 +163,7 @@
           // margin-bottom:30px;
           line-height:unset;
           color:black;
-          font-size:40px;
+          font-size:23px;
         }
 
         p {
@@ -176,7 +175,7 @@
 }
 
   .card-container {
-
+    margin:0 20px;
   }
 }
 
@@ -194,7 +193,7 @@
           // margin-bottom:30px;
           line-height:unset;
           color:#3f3d57;
-          font-size:25px;
+          font-size:20px;
           justify-content:space-between;
         }
 
@@ -203,9 +202,12 @@
     }
 
     h4 {
-      font-size:15px;
+      font-weight:200;
     }
 
+    h5 {
+      font-size:15px;
+    }
     p {
       font-size:15px;
       color:#1F6684;
@@ -247,7 +249,7 @@
     }
       #map {
       position:fixed;
-      top:130px;
+      // top:130px;
     }
 
 .homebutton {
