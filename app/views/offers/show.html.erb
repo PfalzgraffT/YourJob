@@ -37,19 +37,21 @@
       <h3><%= @offer.description %></h3>
     </div>
     <div class="radar">
-    <div class="testbutton1">
-      <canvas id="graph1" style="display:none;">
-      </canvas>
-      <a class="link"><%= link_to "Apply", offer_path(@offer),  data: { turbolinks: false }, class:"btn-ghost", :onclick => 'displayChartRadar()', remote: true, id: "apply" %></a>
+      <div class="testbutton1">
+        <canvas id="graph1" style="display:none;">
+        </canvas>
+        <a class="link"><%= link_to "Apply", offer_path(@offer),  data: { turbolinks: false }, class:"btn-ghost", :onclick => 'displayChartRadar()', remote: true, id: "apply" %></a>
+      </div>
     </div>
   </div>
-  </div>
 </div>
+
 <div id="map"
-        style="width:100%;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+      style="width:100%;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
 <script>
   function displayChartRadar() {
     const radar = document.getElementById("graph1");
