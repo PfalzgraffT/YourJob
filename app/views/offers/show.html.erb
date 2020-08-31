@@ -31,17 +31,17 @@
       </ul>
     </div>
   </div>
-<div class="ticket-text" style="height:40px;">
-  <h1>Offer description</h1>
-    <h3><%= @offer.description %></h3>
-</div>
+  <div class="ticket-text" style="height:auto;">
+    <div><h1>Offer description</h1>
+    <h3><%= @offer.description %></h3></div>
   <div class="testbutton" style=" margin-top: 100px;">
     <a class="link"><%= link_to "Apply", offer_path(@offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
+  </div>
   </div>
 </div>
 
 <div id="map"
-  style="width: 100%; margin-top: 500px;"
+  style="width: 100%; margin-top: 350px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
