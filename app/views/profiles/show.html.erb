@@ -7,17 +7,24 @@
         <%# haut de la carte %>
         <div class="profile-card-top">
           <%# citation %>
-          <%# Name %>
-          <div class="full-name">
-            <h1><%= @user.first_name %></h1>
-            <h1><%= @user.last_name %></h1>
-          </div>
+
           <%# picture + age %>
           <div class="image-block">
               <%= cl_image_tag current_user.profile_pic.key, class: "profile-pic" %>
           </div>
+          <%# Name %>
+          <div>
+            <div class="full-name">
+              <h2><%= @user.first_name %></h2><h1><%= @user.last_name %></h1>
+            </div>
+            <div class="quote">
+              <h5>About Me</h5>
+              <h4>"I am ready to start a new challenge. After being formed at
+              LeWagon, I am a Junior Developer able to program interfaces with the
+              knowledge of CSS, HTML and Ruby languages."</h4>
+            </div>
+          </div>
         </div>
-
         <%# centre de la carte %>
         <div class="row">
           <div class="col-sm-3">
@@ -30,12 +37,6 @@
           </div>
             <div class="col-sm-9">
               <div class="tab-content">
-                <div class="quote">
-                  <h5>About Me</h5>
-                  <h4>"I am ready to start a new challenge. After being formed at
-                  LeWagon, I am a Junior Developer able to program interfaces with the
-                  knowledge of CSS, HTML and Ruby languages."</h4>
-                </div>
                 <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
                   <h3><span>My personal infos</span></h3>
                   <p><i class="far fa-envelope"></i> <%= @user.email %></p>
