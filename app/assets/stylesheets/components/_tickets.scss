@@ -1,13 +1,13 @@
 .ticket {
-  height: 50%;
+  height: 500px;
   margin-right:auto;
   margin-left:auto;
   margin-top:20px;
-  margin-bottom:auto;
+  margin-bottom:10px;
   width:70%;
   background: white;
   box-shadow: 10px 0 15px rgba(0,0,0,0.2);
-  border-radius:20px 20px 0 0;
+  border-radius:0px 0px 0px 0px;
 
   h2 {
     color:white;
@@ -17,7 +17,8 @@
 
   h3 {
     font-size:15px;
-    margin: 20px 0 0 30px;
+    margin:20px 10px;
+    text-align:justify;
   }
 
   p.bordure_horizontale {
@@ -53,13 +54,45 @@
 .align-titles {
   display:flex;
   background-color:#3f3d57;
-  border-radius:20px 20px 0 0;
+  border-radius:0px 0px 0 0;
   // align-items:flex-end;
-}
+  // #graph1 {
+  //   margin-top:25px;
+  //   height:100px;
+  // }
+  }
 
 .ticket-text {
   display:flex;
-  h1 {
-    margin:20px;
+  width:800px;
+
+    h1 {
+      margin:20px;
+      color:#2f97c1;
+    }
+
+    h3 {
+      color:black;
+      margin:20px;
+      font-weight:150;
+    }
+
+    .testbutton1 {
+      background-color:grey;
+      display:flex;
+      margin-top:0px;
+      height:150px;
+      text-align:center;
+      align-items:center;
+      width:100%;
+
+      a.btn-ghost {
+      margin:20px 50px;
+      text-decoration: none;
+
+      .graph1 {
+        height:600px;
+      }
+    }
   }
 }

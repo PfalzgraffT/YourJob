@@ -4,7 +4,7 @@
 }
 .applications-column {
     width: 25%;
-    margin-top: 10px;
+    margin-top: -8px;
     margin-right:30px;
 }
 
@@ -129,17 +129,74 @@
   }
 
 .offer-card {
-    color: white;
+    color: #3f3d57;
     text-align: center;
-    background-color:#85d3f2;
+    background-color:white;
     margin: 30px auto;
     padding: 1px;
+    box-shadow: 10px 0 15px rgba(0,0,0,0.2);
+
+    h2 {
+        font-size: 16px;
+        font-weight:500;
+        width: 120px;
+        margin: 0;
+        }
+
+    h4 {
+       font-weight:200;
+     }
+
+    p {
+      font-size: 12px;
+      line-height: 1.4;
+      opacity: .7;
+      margin-bottom: 0;
+      margin-top: 8px;
+    }
+
+    .status-apply {
+        font-style: italic;
+    }
 }
 
-.offer-card p {
-    line-height: 10px;
+.company-logo-infos {
+    display: flex;
+
+    .logo-company {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+
+        img {
+        height: 75px;
+        }
+    }
+
+    .company-infos {
+        text-align: left;
+        padding-left: 7%;
+        border-left: solid 1px #3f3d57;
+
+    }
+}
+
+.colored-text {
+    color: #1F6684;
+
+    i {
+        padding-right: 2px;
+    }
 }
 
 .offer-card:hover {
+    color: white;
     background-color:#3f3d57;
+
+    .company-infos {
+        border-left-color: white;
+    }
+    .colored-text {
+        color: white;
+    }
 }

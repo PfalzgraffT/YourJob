@@ -1,4 +1,4 @@
-<div class="navbar-yourjob" style="box-shadow: 10px 3px 25px #bababa;  justify-content:space-between; z-index:9px;">
+<div class="navbar-yourjob" style="height:0px; box-shadow: 10px 3px 25px #bababa;  justify-content:space-between; z-index:9px;">
   <div class="logo">
     <%= link_to image_tag("logo_yourjob_copy.png"), root_path %>
     <div class="logo-text">
@@ -7,14 +7,14 @@
   </div>
 
   <div class="avatar">
-    <%= link_to cl_image_tag(current_user.profile_pic.key, class: "avatar dropdown-toggle", id: "navbarDropdown", 'aria-haspopup': true, 'aria-expanded': false), root_path %>
+    <%= link_to cl_image_tag(current_user.profile_pic.key, class: "avatar dropdown-toggle", id: "navbarDropdown", 'aria-haspopup': true, 'aria-expanded': false), profile_path %>
   </div>
 </div>
 
 <div class="ticket">
   <div class="align-titles">
     <h2><%= @offer.title %></h2>
-  <div class="text-draw">
+    <div class="text-draw">
       <ul>
         <div class="list-offer">
           <i class="fas fa-business-time icon"></i>
@@ -31,26 +31,25 @@
       </ul>
     </div>
   </div>
-  <div class="ticket-text" style="height:auto;">
-    <div><h1>Offer description</h1>
-    <h3><%= @offer.description %></h3></div>
-  <div class="testbutton" style=" margin-top: 100px;">
 
-<% if @already_applied %>
-    <canvas id="graph1"></canvas>
-  <% else %>
-    <div class="link"><%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply" %></div>
-<% end %>
-
+  <div class="ticket-text">
+    <div>
+      <h1>Offer description</h1>
+      <h3><%= @offer.description %></h3>
+    </div>
+    <div class="radar">
+      <div class="testbutton1">
+        <% if @already_applied %>
+          <canvas id="graph1"></canvas>
+        <% else %>
+          <div class="link"><%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply" %></div>
+        <% end %>
+       </div>
+     </div>
   </div>
-  </div>
-</div>
 
 <div id="map"
-  style="width: 100%; margin-top: 100px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      style="width:100%;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-
-
-
