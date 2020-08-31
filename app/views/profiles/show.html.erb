@@ -1,78 +1,80 @@
 <div class="all-elements">
     <%# LOGO tout seul :'( %>
-    <%= link_to image_tag("logo_yourjob_copy.png", class: "main-logo"), root_path %>
-    
+    <%= image_tag "logo_yourjob_copy.png", class: "main-logo" %>
+
     <%# carte profil %>
     <div class="profile-card">
         <%# haut de la carte %>
         <div class="profile-card-top">
-            <%# citation %>
-            <div class="quote">
-                <h1>I want to begin my<br>professional life</h1>
-            </div>
-            <%# Name %>
-            <div class="full-name">
-                <h2><%= @user.first_name %></h2>
-                <h2><%= @user.last_name %></h2>
-            </div>
-            <%# picture + age %>
-            <div class="image-block">
-                <%= cl_image_tag current_user.profile_pic.key, class: "profile-pic" %>
-            </div>
+          <%# citation %>
+          <%# Name %>
+          <div class="full-name">
+            <h1><%= @user.first_name %></h1>
+            <h1><%= @user.last_name %></h1>
+          </div>
+          <%# picture + age %>
+          <div class="image-block">
+              <%= cl_image_tag current_user.profile_pic.key, class: "profile-pic" %>
+          </div>
         </div>
 
         <%# centre de la carte %>
         <div class="row">
-            <div class="col-sm-3">
-                <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked">
-                    <li><a href="#vtab1" data-toggle="tab"><i class="far fa-address-card"></i></a></li>
-                    <li><a href="#vtab2" data-toggle="tab"><i class="fas fa-business-time"></i></a></li>
-                    <li><a href="#vtab3" data-toggle="tab"><i class="fas fa-file-contract"></i></a></li>
-                    <li><a href="#vtab4" data-toggle="tab"><i class="fas fa-map-marker-alt"></i></a></li>
-                </ul>
-            </div>
+          <div class="col-sm-3">
+            <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked">
+              <li><a href="#vtab1" data-toggle="tab"><i class="far fa-address-card"></i></a></li>
+              <li><a href="#vtab2" data-toggle="tab"><i class="fas fa-business-time"></i></a></li>
+              <li><a href="#vtab3" data-toggle="tab"><i class="fas fa-file-contract"></i></a></li>
+              <li><a href="#vtab4" data-toggle="tab"><i class="fas fa-map-marker-alt"></i></a></li>
+            </ul>
+          </div>
             <div class="col-sm-9">
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
-                        <h3><span>My personal infos</span></h3>
-                        <p><i class="far fa-envelope"></i> <%= @user.email %></p>
-                        <p><i class="fas fa-map-marker-alt"></i> <%= @user.address %></p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade in" id="vtab2">
-                        <h3><span>My domain</span></h3>
-                        <p><%= @user.activity %></p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade in" id="vtab3">
-                        <h3><span>Contract type wanted</span></h3>
-                        <p><%= @user.contract %></p>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade in" id="vtab4">
-                        <h3><span>Where I look for a job</span></h3>
-                        <p><%= @user.location %></p>
-                    </div>
+              <div class="tab-content">
+                <div class="quote">
+                  <h5>About Me</h5>
+                  <h4>"I am ready to start a new challenge. After being formed at
+                  LeWagon, I am a Junior Developer able to program interfaces with the
+                  knowledge of CSS, HTML and Ruby languages."</h4>
                 </div>
+                <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
+                  <h3><span>My personal infos</span></h3>
+                  <p><i class="far fa-envelope"></i> <%= @user.email %></p>
+                  <p><i class="fas fa-map-marker-alt"></i> <%= @user.address %></p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="vtab2">
+                  <h3><span>My domain</span></h3>
+                  <p><%= @user.activity %></p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="vtab3">
+                  <h3><span>Contract type wanted</span></h3>
+                  <p><%= @user.contract %></p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="vtab4">
+                    <h3><span>Where I look for a job</span></h3>
+                    <p><%= @user.location %></p>
+                </div>
+              </div>
             </div>
         </div>
-
-        <div class="apply-btn">
-            <%= link_to "Apply for a new job", offers_path, data:{turbolinks: false}, class:"btn-darkblue" %>
-        </div>
+          <div class="testbutton" style="margin-bottom: 150px;">
+            <a class="link"><%= link_to "Apply for a new job", offers_path, data:{turbolinks: false}, class:"btn-ghost"%></a>
+          </div>
     </div>
-
     <%# OFFRES d'emploi candidaté %>
-    <div class="applications-column">
-        <h3>Applications</h3>
-        <%# offer cards %>
-        <% @user.applies.each do |apply| %>
-            <%= link_to offer_path(apply), class: "btn-apply-card" do %>
-            <div class="offer-card">
-                <h4><strong><%= apply.offer.title %></strong></h4>
-                <p><%= apply.offer.contract %></p>
-                <p><%= apply.offer.recruiter.company %></p>
-                <p><%= apply.offer.location %></p>
-                <h4><strong><%= apply.status %></strong></h4>
-            </div> 
-            <% end %>
-        <% end %>
-    </div>
+  <div class="applications-column">
+    <h3>Applications</h3>
+    <%# offer cards %>
+    <% @user.applies.each do |apply| %>
+        <%= link_to offer_path(apply), class: "btn-apply-card" do %>
+        <div class="offer-card">
+            <h4><strong><%= apply.offer.title %></strong></h4>
+            <p><%= apply.offer.contract %></p>
+            <p><%= apply.offer.recruiter.company %></p>
+            <p><%= apply.offer.location %></p>
+            <h4><strong><%= apply.status %></strong></h4>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
+
