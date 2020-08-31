@@ -17,9 +17,11 @@ require("channels")
 
 // CSS
 import 'mapbox-gl/dist/mapbox-gl.css';
+//import 'progressbar/dist/progressbar.css';
 // internal imports
 import { initMapbox } from '../plugins/init_mapbox';
-
+import { initProgressBar } from '../plugins/init_progressbar';
+import { initChart } from '../plugins/init_chart';
 // ----------------------------------------------------
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
@@ -38,5 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initMapbox();
+  initProgressBar();
+  initChart();
   // initNavTabs();
 });

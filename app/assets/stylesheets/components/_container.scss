@@ -220,18 +220,22 @@
   width:100%;
 
   a.btn-ghost {
-    margin:30px 50px;
+    margin:20px 50px;
     text-decoration: none;
     // margin-bottom:50px;
 
   }
   .compatibility {
-  // margin-top:40px;
-  // text-align:center;
+  text-align:center;
+  align-items: center;
+  justify-content: center;
 
-    h3 {
-      font-size:30px;
+    .matching-percentage-css {
       color:#3f3d57;
+      width: 32%;
+      position: relative;
+      display: inline-block;
+      margin-top: 30px;
     }
   }
 }
@@ -262,4 +266,15 @@
     text-decoration: none;
 
   }
+}
+
+.stats {
+    position: absolute;
+    margin-top: -28px;
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 140px;
+    font-weight: bold;
+    font-size: 20px;
 }
