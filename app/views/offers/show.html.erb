@@ -35,8 +35,10 @@
     <div><h1>Offer description</h1>
     <h3><%= @offer.description %></h3></div>
   <div class="testbutton" style=" margin-top: 100px;">
-    <a class="link"><%= link_to "Apply", offer_path(@offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
-    <canvas id="graph1"></canvas>
+
+    <a class="link"><%= link_to "Apply", offer_path(@offer),  data: { turbolinks: false }, class:"btn-ghost", :onclick => 'displayChartRadar()', remote: true, id: "apply" %></a>
+    <canvas id="graph1" style="display: none;"></canvas>
+
   </div>
   </div>
 </div>
@@ -48,3 +50,11 @@
 </div>
 
 
+<script>
+  function displayChartRadar() {
+    const radar = document.getElementById("graph1");
+    radar.style.display = "block";
+    const buttonApply = document.getElementById("apply");
+    buttonApply.style.display = "none";
+  }
+</script>
