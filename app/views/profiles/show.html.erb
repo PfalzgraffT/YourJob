@@ -68,14 +68,22 @@
     <% @user.applies.each do |apply| %>
         <%= link_to offer_path(apply), class: "btn-apply-card" do %>
         <div class="offer-card">
-            <h4><strong><%= apply.offer.title %></strong></h4>
-            <p><%= apply.offer.contract %></p>
-            <p><%= apply.offer.recruiter.company %></p>
-            <p><%= apply.offer.location %></p>
-            <h4><strong><%= apply.status %></strong></h4>
+            <div class="company-logo-infos">
+                <div class="logo-company">
+                    <%= cl_image_tag apply.offer.recruiter.logo.key %>
+                </div>
+                <div class="company-infos">
+                    <h4><strong><%= apply.offer.title %></strong></h4>
+                    <p><%= apply.offer.recruiter.company %></p>
+                    <div class="colored-text">
+                        <p><i class="fas fa-file-contract icon"></i><%= apply.offer.contract %></p>
+                        <p><i class="fas fa-map-marker-alt icon"></i><%= apply.offer.location %></p>
+                    </div>
+                </div>
+            </div>
+            <h4 class="status-apply"><strong><%= apply.status %></strong></h4>
         </div>
       <% end %>
     <% end %>
   </div>
 </div>
-
