@@ -17,7 +17,7 @@
 
   h3 {
     font-size:15px;
-    margin:20px 120px 50px 20px;
+    margin:20px 10px;
     text-align:justify;
   }
 
@@ -68,5 +68,21 @@
 
     h1 {
       margin:20px;
+      color:#2f97c1;
+    }
+
+    h3 {
+      color:black;
+      margin:20px;
+      font-weight:150;
+    }
+
+    .testbutton{
+      margin-top:20%;
+      margin-right:auto;
+      margin-left:auto;
+      .graph1 {
+        height:700px;
+      }
     }
   }
