@@ -54,8 +54,8 @@
 
               <div class="testbutton">
                 <div class="compatibility">
-                  <span class="matching-percentage-js matching-percentage-css" value="<%= '%.2f' % offer.matching_percentage %>"><%= '%.2f' % offer.matching_percentage %>%</span>
-            <span class="stats"></span>
+                  <span class="matching-percentage-js matching-percentage-css" data-percentage="<%= offer.matching_percentage %>"><%#= '%.2f' % offer.matching_percentage %></span>
+
                 </div>
                 <a class="link"><%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
             </div>

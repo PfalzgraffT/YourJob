@@ -6,7 +6,7 @@ const initProgressBar = () => {
 
   matchingPercentages.forEach((matchingPercentage) => {
     const circle = new ProgressBar.Circle(matchingPercentage, {
-      color: '#222222',
+      color: '#2F97C1',
       // This has to be the same size as the maximum width to
       // prevent clipping
       strokeWidth: 4,
@@ -33,10 +33,10 @@ const initProgressBar = () => {
 
       }
     });
-    circle.value = '50';
-    circle.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-    circle.text.style.fontSize = '2rem';
-    circle.text.style.top = '63%';
+    circle.value = matchingPercentage.dataset.percentage;
+    circle.text.style.fontFamily = '"Changa", Helvetica, sans-serif';
+    circle.text.style.fontSize = '3rem';
+    circle.text.style.top = '50%';
     circle.animate(circle.value / 100);  // Number from 0.0 to 1.0
   });
 };

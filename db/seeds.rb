@@ -53,7 +53,7 @@ fullstack_dev = Offer.create!(
     empathy: 1,
     latitude: 43.2961743,
     longitude: 5.3699525,
-    recruiter: magalie,
+    recruiter_id: magalie.id,
 )
 
 caregiver = Offer.create!(
@@ -79,7 +79,7 @@ caregiver = Offer.create!(
     empathy: 5,
     latitude: 48.8534100,
     longitude: 2.3488000,
-    recruiter: marcel,
+    recruiter_id: marcel.id,
 )
 
 front_dev = Offer.create!(
@@ -109,7 +109,7 @@ front_dev = Offer.create!(
     empathy: 1,
     latitude: 47.218133,
     longitude: -1.553029,
-    recruiter: magalie,
+    recruiter_id: magalie.id,
 )
 
 cleaning_operator = Offer.create!(
@@ -136,7 +136,7 @@ cleaning_operator = Offer.create!(
     empathy: 2,
     latitude: 45.7484600,
     longitude: 4.8467100,
-    recruiter: marcel,
+    recruiter_id: marcel.id,
 )
 
 fullstack_dev2 = Offer.create!(
@@ -167,7 +167,7 @@ fullstack_dev2 = Offer.create!(
     empathy: 1,
     latitude: 47.205306,
     longitude: -1.54788,
-    recruiter: magalie,
+    recruiter_id: magalie.id,
 )
 
 fullstack_dev3 = Offer.create!(
@@ -196,7 +196,7 @@ fullstack_dev3 = Offer.create!(
     empathy: 1,
     latitude: 48.1119800,
     longitude: -1.6742900,
-    recruiter: michel,
+    recruiter_id: michel.id,
 )
 
 front_dev2 = Offer.create!(
@@ -227,7 +227,7 @@ front_dev2 = Offer.create!(
     empathy: 1,
     latitude: 47.21067,
     longitude: -1.572942,
-    recruiter: michel,
+    recruiter_id: michel.id,
 )
 
 front_dev3 = Offer.create!(
@@ -253,7 +253,7 @@ front_dev3 = Offer.create!(
     empathy: 1,
     latitude: 47.218949,
     longitude: -1.564874,
-    recruiter: marcel,
+    recruiter_id: marcel.id,
 )
 
 back_dev = Offer.create!(
@@ -283,7 +283,7 @@ back_dev = Offer.create!(
     empathy: 2,
     latitude: 48.5839200,
     longitude: 7.7455300,
-    recruiter: michel,
+    recruiter_id: michel.id,
 )
 
 puts "Create users..."

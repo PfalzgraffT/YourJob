@@ -3,7 +3,10 @@ class OffersController < ApplicationController
     # @offers = Offer.all
 
     @user = current_user
-    @offers = Offer.select('offers.*', "#{@user.matching_percentage_calc} AS matching_percentage").order('matching_percentage DESC').geocoded
+    @offers = Offer.select('offers.*', "#{@user.matching_percentage_calc} AS matching_percentage")
+                   .order('matching_percentage DESC')
+                   .geocoded
+                   .includes(recruiter: { logo_attachment: :blob })
     @markers = @offers.map do |offer|
       {
         lat: offer.latitude,
