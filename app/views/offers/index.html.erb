@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="avatar">
-    <%= cl_image_tag current_user.profile_pic.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <%= cl_image_tag current_user.profile_pic.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
   </div>
 </div>
 <div class="flex-container">
@@ -54,7 +54,7 @@
 
               <div class="testbutton">
                 <div class="compatibility">
-                  <h3><%= offer.matching_percentage %>%</h3>
+                  <h3><%= '%.2f' % offer.matching_percentage %>%</h3>
                 </div>
                 <a class="link"><%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
             </div>
