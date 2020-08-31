@@ -64,7 +64,7 @@
 
 .ticket-text {
   display:flex;
-  height:200px;
+  width:800px;
 
     h1 {
       margin:20px;
@@ -77,12 +77,22 @@
       font-weight:150;
     }
 
-    .testbutton{
-      margin-top:20%;
-      margin-right:auto;
-      margin-left:auto;
+    .testbutton1 {
+      background-color:grey;
+      display:flex;
+      margin-top:0px;
+      height:150px;
+      text-align:center;
+      align-items:center;
+      width:100%;
+
+      a.btn-ghost {
+      margin:20px 50px;
+      text-decoration: none;
+
       .graph1 {
-        height:700px;
+        height:600px;
       }
     }
   }
+}
