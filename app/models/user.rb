@@ -54,18 +54,18 @@ class User < ApplicationRecord
   #end
   def matching_percentage_calc
     soft_skills_cases = SOFT_SKILLS.map do |soft_skill|
-      <<~SQL
+      <<~STRING
         (
           CASE
-            WHEN offers.#{soft_skill}::int     <= '#{self[soft_skill]}' THEN 100
-            WHEN offers.#{soft_skill}::int - 1 <= '#{self[soft_skill]}' THEN 75
-            WHEN offers.#{soft_skill}::int - 2 <= '#{self[soft_skill]}' THEN 50
-            WHEN offers.#{soft_skill}::int - 3 <= '#{self[soft_skill]}' THEN 25
+            WHEN offers.#{soft_skill}       <= #{self[soft_skill]} THEN 100
+            WHEN (offers.#{soft_skill} - 1) <= #{self[soft_skill]} THEN 75
+            WHEN (offers.#{soft_skill} - 2) <= #{self[soft_skill]} THEN 50
+            WHEN (offers.#{soft_skill} - 3) <= #{self[soft_skill]} THEN 25
             ELSE
               0
           END
         )
-      SQL
+      STRING
     end
     soft_skills_query = soft_skills_cases.join(" +\n")
     <<~SQL
