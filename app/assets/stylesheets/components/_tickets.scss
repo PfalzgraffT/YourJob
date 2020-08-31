@@ -1,0 +1,64 @@
+.ticket {
+  height: 450px;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top:10px;
+  margin-bottom:auto;
+  width:70%;
+  background: white;
+  box-shadow: 10px 0 15px rgba(0,0,0,0.2);
+  border-radius:20px 20px 0 0;
+
+  h2 {
+    color:white;
+    font-size:20px;
+    margin: 10px 0 0 30px;
+  }
+
+  h3 {
+    font-size:15px;
+    margin: 20px 0 0 30px;
+  }
+
+  p.bordure_horizontale {
+  width:100px;
+  padding-right: 0px;
+  border-bottom: 1px solid yellow;
+  }
+
+  .text-draw {
+    margin:10px;
+    color:white;
+      i {
+        font-size:20px;
+        align-self:baseline;
+      }
+
+      p {
+        font-size:15px;
+        align-items:flex-end;
+      }
+
+    .list-offer{
+      display: inline-flex;
+      margin-right:20px;
+
+      .icon {
+        margin-right:10px;
+      }
+    }
+  }
+}
+
+.align-titles {
+  display:flex;
+  background-color:#3f3d57;
+  border-radius:20px 20px 0 0;
+  // align-items:flex-end;
+}
+
+.ticket-text {
+  h1 {
+    margin:20px;
+  }
+}
