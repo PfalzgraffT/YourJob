@@ -36,11 +36,13 @@
       <h1>Offer description</h1>
       <h3><%= @offer.description %></h3>
     </div>
-    <div class="testbutton">
+    <div class="radar">
+    <div class="testbutton1">
       <canvas id="graph1" style="display:none;">
       </canvas>
       <a class="link"><%= link_to "Apply", offer_path(@offer),  data: { turbolinks: false }, class:"btn-ghost", :onclick => 'displayChartRadar()', remote: true, id: "apply" %></a>
     </div>
+  </div>
   </div>
 </div>
 <div id="map"
