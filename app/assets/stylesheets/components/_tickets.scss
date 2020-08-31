@@ -1,8 +1,8 @@
 .ticket {
-  height: 450px;
+  height: 50%;
   margin-right:auto;
   margin-left:auto;
-  margin-top:10px;
+  margin-top:20px;
   margin-bottom:auto;
   width:70%;
   background: white;
@@ -58,6 +58,7 @@
 }
 
 .ticket-text {
+  display:flex;
   h1 {
     margin:20px;
   }
