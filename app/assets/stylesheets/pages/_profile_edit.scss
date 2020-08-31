@@ -1,4 +1,43 @@
+.page-center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60em;
+    text-align: center;
+    font-family: "Roboto";
+    // background-color: white;
+    
+    h2 {
+        color: #2f97c1;
+        font-weight: bold;
+        // text-align: left;
+    }
+
+    h3 {
+        font-weight: bold;
+        color: white;
+    }
+
+    p {
+        color: white;
+        font-size: 20px;
+    }
+
+    button {
+        margin-top: 2%;
+    }
+}
+
 .skill-card {
-    color: white;
-    background-color: darkblue;
+    background-color: #3f3d57;
+    height: 30em;
+    padding: 5%;
+    border-radius: 20px;
+    text-align: center;
+
+    .fa-star {
+        padding-top: 20%;
+        font-size: 28px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
