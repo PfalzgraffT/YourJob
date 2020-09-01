@@ -19,6 +19,7 @@ class OffersController < ApplicationController
   def show
     @offer = Offer.find(params[:id])
     @recruiter = Recruiter.new
+    @user = current_user
 
     @markers = [
       {
@@ -26,6 +27,8 @@ class OffersController < ApplicationController
         lng: @offer.longitude
       }
     ]
+    @user_skills = User::SOFT_SKILLS.map { |soft_skill| @user[soft_skill] }
+    @offer_skills = User::SOFT_SKILLS.map { |soft_skill| @offer[soft_skill] }
     @already_applied = current_user.applies.where(offer_id: @offer).exists?
   end
 end

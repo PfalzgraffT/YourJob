@@ -1,25 +1,27 @@
 const initChart = () => {
-
-  const chartElement = document.getElementById('graph1');
-
+  const chartElement    = document.getElementById('graph1');
   if (chartElement) {
-    const ctx = chartElement.getContext('2d');
+    const userName      = chartElement.dataset.userFullname;
+    const recruiterName = chartElement.dataset.companyName;
+    const userSkills    = JSON.parse(chartElement.dataset.userSkills);
+    const offerSkills   = JSON.parse(chartElement.dataset.offerSkills);
+    const ctx           = chartElement.getContext('2d');
     const data = {
         // The data for our dataset
             labels: ['interpersonal_skills', 'rigor', 'independence', 'communication', 'teamwork', 'creativity', 'initiative', 'stress_management', 'perseverance', 'decision_making', 'curiosity', 'adaptability', 'enthusiam', 'flexibility', 'empathy'],
             datasets: [
             {
-                label: 'User',
+                label: userName,
                 //backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgb(255, 99, 132)',
                 //borderWidth:
-                data: [ 1, 4, 3, 2, 2, 3, 4, 3, 2, 5, 4, 1, 1, 2, 3]
+                data: userSkills
             },
             {
-                label: 'Recruiter',
+                label: recruiterName,
                 //backgroundColor: 'rgb(25, 99, 132)',
                 borderColor: 'rgb(25, 99, 132)',
-                data: [3, 3, 5, 4, 2, 3, 3, 5, 4, 1, 5, 2, 3, 4, 1]
+                data: offerSkills
             }
           ]
         };
