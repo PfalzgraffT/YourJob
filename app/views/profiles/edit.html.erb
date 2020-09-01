@@ -11,30 +11,77 @@
 <div class="page-center">
     <h2>Check your skills</h2>
     <%# carte du skill (utiliser js) %>
-    <div class="skill-card">
-        <h3>Adaptability</h3>
-        <p>The ability to change (or be changed) to fit changed circumstances</p>
-        <%# star rating %>
-        <div class="stars-line" id="full-stars-rating">
-            <div class="rating-group">
-                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
-                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
-                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
-                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
-                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
-                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+    <%# <%= simple_form_for current_user %>
+    <div class="siema">
+        
+        <div class="skill-card">
+            <h3>Adaptability</h3>
+            <p>The ability to change (or be changed) to fit changed circumstances</p>
+            <%# star rating %>
+            <div class="stars-line" id="full-stars-rating">
+                <div class="rating-group">
+                    <input disabled checked class="rating__input rating__input--none" name="user[adapt]" id="adapt-none" value="0" type="radio">
+                    <label aria-label="1 star" class="rating__label" for="adapt-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[adapt]" id="adapt-1" value="1" type="radio">
+                    <label aria-label="2 stars" class="rating__label" for="adapt-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[adapt]" id="adapt-2" value="2" type="radio">
+                    <label aria-label="3 stars" class="rating__label" for="adapt-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[adapt]" id="adapt-3" value="3" type="radio">
+                    <label aria-label="4 stars" class="rating__label" for="adapt-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[adapt]" id="adapt-4" value="4" type="radio">
+                    <label aria-label="5 stars" class="rating__label" for="adapt-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[adapt]" id="adapt-5" value="5" type="radio">
+                </div>
             </div>
+            <%# image du skill %>
+            <%# <%= image_tag "", class: skill_image %>
+        </div>
+        <div class="skill-card">
+            <h3>Communication</h3>
+            <p>The ability to exchange and listen informations with other individuals</p>
+            <%# star rating %>
+            <div class="stars-line" id="full-stars-rating">
+                <div class="rating-group">
+                    <input disabled checked class="rating__input rating__input--none" name="user[com]" id="com-none" value="0" type="radio">
+                    <label aria-label="1 star" class="rating__label" for="com-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[com]" id="com-1" value="1" type="radio">
+                    <label aria-label="2 stars" class="rating__label" for="com-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[com]" id="com-2" value="2" type="radio">
+                    <label aria-label="3 stars" class="rating__label" for="com-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[com]" id="com-3" value="3" type="radio">
+                    <label aria-label="4 stars" class="rating__label" for="com-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[com]" id="com-4" value="4" type="radio">
+                    <label aria-label="5 stars" class="rating__label" for="com-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[com]" id="com-5" value="5" type="radio">
+                </div>
+            </div>
+            <%# image du skill %>
+            <%= image_tag "communication.svg", class: "skill-image" %>
+        </div>
+        <div class="skill-card">
+            <h3>Creativity</h3>
+            <p>The ability to solve problems with relevance and novelty</p>
+            <%# star rating %>
+            <div class="stars-line" id="full-stars-rating">
+                <div class="rating-group">
+                    <input disabled checked class="rating__input rating__input--none" name="user[creativity]" id="creativity-none" value="0" type="radio">
+                    <label aria-label="1 star" class="rating__label" for="creativity-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[creativity]" id="creativity-1" value="1" type="radio">
+                    <label aria-label="2 stars" class="rating__label" for="creativity-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[creativity]" id="creativity-2" value="2" type="radio">
+                    <label aria-label="3 stars" class="rating__label" for="creativity-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[creativity]" id="creativity-3" value="3" type="radio">
+                    <label aria-label="4 stars" class="rating__label" for="creativity-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[creativity]" id="creativity-4" value="4" type="radio">
+                    <label aria-label="5 stars" class="rating__label" for="creativity-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                    <input class="rating__input" name="user[creativity]" id="creativity-5" value="5" type="radio">
+                </div>
+            </div>
+            <%# image du skill %>
+            <%= image_tag "creativity.svg", class: "skill-image" %>
         </div>
     </div>
     <%# boutton pour passer au skill suivant puis si last skill : end questions%>
-    <button class="btn-ghost">Validate your skill</button>
+    <button class="prev btn-ghost">Previous skill</button>
+    <button class="next btn-ghost">Validate your skill</button>
 </div>
-
-<%# image du skill %>
-<img src="" alt="">
-

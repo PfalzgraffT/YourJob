@@ -22,6 +22,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initProgressBar } from '../plugins/init_progressbar';
 import { initChart } from '../plugins/init_chart';
+import { initSiema } from '../plugins/init_siema';
 // ----------------------------------------------------
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
@@ -42,5 +43,6 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initProgressBar();
   initChart();
+  initSiema();
   // initNavTabs();
 });
