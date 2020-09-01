@@ -46,3 +46,18 @@
     text-decoration: none;
   }
 
+  .btn-submit {
+    font-family:'Roboto';
+    font-weight:bold;
+    text-align:center;
+    padding: 10px 15px;
+    border-radius: 15px;
+    width:200px;
+    text-decoration: none;
+    background-color: #6c63ff;
+  }
+
+  .btn-submit:hover {
+    color: white;
+    background-color: #2f97c1;
+  }
