@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@offer.title} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @offer.description %>
+<% content_for :meta_image, cl_image_path(@offer.recruiter.logo.key) %>
+
 <div class="navbar-yourjob" style="height:0px; box-shadow: 10px 3px 25px #bababa;  justify-content:space-between; z-index:9px;">
   <div class="logo">
     <%= link_to image_tag("logo_yourjob_copy.png"), root_path %>
