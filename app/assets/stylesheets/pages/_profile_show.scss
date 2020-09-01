@@ -47,7 +47,7 @@
     p {
         color:#3f3d57;
         font-family:initial;
-        font-size: 20px;
+        font-size: 15px;
         font-style:oblique;
     }
 
@@ -66,7 +66,7 @@
     .quote {
         align-self: flex-end;
         margin-left:20px;
-        margin-top: 20px;
+        // margin-top: 20px;
         border-left: solid 4px #2F97C1;
         padding-left: 40px;
 
@@ -82,25 +82,38 @@
     .full-name {
       margin-left:20px;
       color:#2F97C1;
-      height:130px;
       // text-align:center;
+    }
+
+    .user-infos {
+        margin-right:20px
+      }
+
+    .line-infos {
+      h3 {
+        font-weight:100;
+        font-size:20px;
+        margin-left:20px;
+        margin-top: 10px;
+        margin-bottom: 22px;
+      }
     }
 
     .name-infos {
       display:flex;
       justify-content:space-between;
-      align-items:flex-end;
+      align-items:center;
 
-      .tab-content {
-        margin-left:100px;
-        padding:20px;
-        h3 {
-          font-size: 15px;
-        }
-        p {
-          font-size: 15px;
-        }
-      }
+      // .tab-content {
+      //   margin-left:10px;
+      //   padding:20px;
+      //   h3 {
+      //     font-size: 15px;
+      //   }
+      //   p {
+      //     font-size: 15px;
+      //   }
+      // }
     }
 
     .image-block {
@@ -116,13 +129,18 @@
     border-radius:20px 0 0 0;
   }
 
-.row .col-sm-9 {
+.col-sm-9 {
   align-items: center;
   display: flex;
 
-
   h3 span {
     border-bottom: solid #2F97C1;
+  }
+}
+
+.row {
+  .col-sm-3 {
+    display:flex;
   }
 }
 
