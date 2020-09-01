@@ -3,7 +3,7 @@
   position:sticky;
   justify-content:space-between;
   top:0;
-  height:100px;
+  height:80px;
   background-color: white;
   z-index: 9;
   opacity:10;
@@ -16,6 +16,7 @@
         img {
           height:70px;
           width:70px;
+          margin-top: -5px;
         }
 
         h1 {
@@ -28,8 +29,8 @@
       }
 
       .avatar {
-      margin-right:10px;
-      margin-top: 5px;
+      margin-right:4px;
+      margin-top: 2px;
       position:sticky;
       }
 }
