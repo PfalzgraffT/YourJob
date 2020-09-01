@@ -33,14 +33,14 @@
   </div>
 
   <div class="ticket-text">
-    <div>
+    <div class="text">
       <h1>Offer description</h1>
       <h3><%= @offer.description %></h3>
     </div>
     <div class="radar">
       <div class="testbutton1">
         <% if @already_applied %>
-          <canvas id="graph1" style="height:500px, width:1000px;"></canvas>
+          <canvas id="graph1"></canvas>
         <% else %>
           <div class="link"><%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply" %></div>
         <% end %>
