@@ -177,6 +177,8 @@
             </div>
           </div>
         </div>
+        <div class="border_profile"></div>
+        <div class="border_profile"></div>
             <div class=tableau2>
           <div class="grid-skills">
             <div class="skills-line" id="full-stars-rating">
@@ -356,11 +358,11 @@
                 <div class="logo-company">
                     <%= cl_image_tag apply.offer.recruiter.logo.key %>
                 </div>
+                <div class="border_card"></div>
                 <div class="company-infos">
-                    <h2><strong><%= apply.offer.title %></strong></h2>
+                    <h2><strong><%= apply.offer.title %></strong><p><%= apply.offer.contract %></p></h2>
                     <h4><%= apply.offer.recruiter.company %></h4>
                     <div class="colored-text">
-                        <p><i class="fas fa-file-contract icon"></i><%= apply.offer.contract %></p>
                         <p><i class="fas fa-map-marker-alt icon"></i><%= apply.offer.location %></p>
                     </div>
                 </div>
