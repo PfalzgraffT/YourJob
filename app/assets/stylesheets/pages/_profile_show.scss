@@ -129,13 +129,43 @@
     border-radius:20px 0 0 0;
   }
 
-.col-sm-9 {
-  align-items: center;
-  display: flex;
+.tableaux {
+  display:flex;
+  justify-content:space-between;
+  margin-top:10px;
+}
 
-  h3 span {
-    border-bottom: solid #2F97C1;
+.tableau1 {
+  margin-left: 200px;
+}
+
+.tableau2 {
+  margin-right:200px;
+}
+
+.grid-skills {
+  display: flex;
+  margin-left:auto;
+  margin-right:auto;
+
+  .skills-line {
+    display:flex;
+    align-items:center;
+
+    .rating-group {
+      height:20px;
+    }
+
+    .skills {
+      h3 {
+        font-size:15px;
+      }
+    }
   }
+
+  // h3 span {
+  //   border-bottom: solid #2F97C1;
+  // }
 }
 
 .row {
