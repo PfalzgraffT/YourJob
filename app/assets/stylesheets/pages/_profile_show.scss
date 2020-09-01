@@ -47,7 +47,7 @@
     p {
         color:#3f3d57;
         font-family:initial;
-        font-size: 20px;
+        font-size: 15px;
         font-style:oblique;
     }
 
@@ -58,7 +58,6 @@
 
 .profile-card-top {
     display: flex;
-    background:white;
     // justify-content: space-between;
     // position: relative;
     height: 250px;
@@ -67,7 +66,7 @@
     .quote {
         align-self: flex-end;
         margin-left:20px;
-        margin-top: 20px;
+        // margin-top: 20px;
         border-left: solid 4px #2F97C1;
         padding-left: 40px;
 
@@ -83,8 +82,38 @@
     .full-name {
       margin-left:20px;
       color:#2F97C1;
-      height:130px;
       // text-align:center;
+    }
+
+    .user-infos {
+        margin-right:20px
+      }
+
+    .line-infos {
+      h3 {
+        font-weight:100;
+        font-size:20px;
+        margin-left:20px;
+        margin-top: 10px;
+        margin-bottom: 22px;
+      }
+    }
+
+    .name-infos {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      // .tab-content {
+      //   margin-left:10px;
+      //   padding:20px;
+      //   h3 {
+      //     font-size: 15px;
+      //   }
+      //   p {
+      //     font-size: 15px;
+      //   }
+      // }
     }
 
     .image-block {
@@ -100,12 +129,48 @@
     border-radius:20px 0 0 0;
   }
 
-.row .col-sm-9 {
-  align-items: center;
-  display: flex;
+.tableaux {
+  display:flex;
+  justify-content:space-between;
+  margin-top:10px;
+}
 
-  h3 span {
-      border-bottom: solid #2F97C1;
+.tableau1 {
+  margin-left: 200px;
+}
+
+.tableau2 {
+  margin-right:200px;
+}
+
+.grid-skills {
+  display: flex;
+  margin-left:auto;
+  margin-right:auto;
+
+  .skills-line {
+    display:flex;
+    align-items:center;
+
+    .rating-group {
+      height:20px;
+    }
+
+    .skills {
+      h3 {
+        font-size:15px;
+      }
+    }
+  }
+
+  // h3 span {
+  //   border-bottom: solid #2F97C1;
+  // }
+}
+
+.row {
+  .col-sm-3 {
+    display:flex;
   }
 }
 

@@ -8,57 +8,301 @@
     <div class="profile-card">
         <%# haut de la carte %>
         <div class="profile-card-top">
-          <%# citation %>
-
           <%# picture + age %>
           <div class="image-block">
               <%= cl_image_tag current_user.profile_pic.key, class: "profile-pic" %>
           </div>
           <%# Name %>
-          <div>
+          <div class="line-infos">
+          <div class="name-infos">
             <div class="full-name">
               <h2><%= @user.first_name %></h2><h1><%= @user.last_name %></h1>
             </div>
+            <div class="user-infos">
+              <p><i class="far fa-envelope"></i> <%= @user.email %></p>
+              <p><i class="fas fa-map-marker-alt"></i> <%= @user.address %></p>
+            </div>
+          </div>
+          <h3><%= @user.activity %> -  <%= @user.contract %> - <%= @user.location %></h3>
             <div class="quote">
               <h5>About Me</h5>
               <h4>"I am ready to start a new challenge. After being formed at
               LeWagon, I am a Junior Developer able to program interfaces with the
               knowledge of CSS, HTML and Ruby languages."</h4>
             </div>
-          </div>
+            </div>
+
         </div>
         <%# centre de la carte %>
-        <div class="row">
-          <div class="col-sm-3">
-            <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked">
-              <li><a href="#vtab1" data-toggle="tab"><i class="far fa-address-card"></i></a></li>
-              <li><a href="#vtab2" data-toggle="tab"><i class="fas fa-business-time"></i></a></li>
-              <li><a href="#vtab3" data-toggle="tab"><i class="fas fa-file-contract"></i></a></li>
-              <li><a href="#vtab4" data-toggle="tab"><i class="fas fa-map-marker-alt"></i></a></li>
-            </ul>
-          </div>
-            <div class="col-sm-9">
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
-                  <h3><span>My personal infos</span></h3>
-                  <p><i class="far fa-envelope"></i> <%= @user.email %></p>
-                  <p><i class="fas fa-map-marker-alt"></i> <%= @user.address %></p>
-                </div>
-                <div role="tabpanel" class="tab-pane fade in" id="vtab2">
-                  <h3><span>My domain</span></h3>
-                  <p><%= @user.activity %></p>
-                </div>
-                <div role="tabpanel" class="tab-pane fade in" id="vtab3">
-                  <h3><span>Contract type wanted</span></h3>
-                  <p><%= @user.contract %></p>
-                </div>
-                <div role="tabpanel" class="tab-pane fade in" id="vtab4">
-                    <h3><span>Where I look for a job</span></h3>
-                    <p><%= @user.location %></p>
-                </div>
+        <div class="tableaux">
+          <div class=tableau1>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+              <div class="skills">
+                <h3>Creativity</h3>
               </div>
             </div>
+          </div>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+            </div>
+          </div>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+            </div>
+          </div>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+            </div>
+          </div>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+            </div>
+          </div>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+            </div>
+          </div>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+            </div>
+          </div>
         </div>
+            <div class=tableau2>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+            </div>
+          </div>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+            </div>
+          </div>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+            </div>
+          </div>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+            </div>
+          </div>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+            </div>
+          </div>
+          <div class="grid-skills">
+            <div class="skills-line" id="full-stars-rating">
+              <div class="skills">
+                <h3>Creativity</h3>
+              </div>
+              <div class="rating-group">
+                <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- <div class=tableau2>
+        </div> -->
+      </div>
           <div class="testbutton" style="margin-bottom: 150px;">
             <a class="link"><%= link_to "Apply for a new job", offers_path, data:{turbolinks: false}, class:"btn-ghost"%></a>
           </div>

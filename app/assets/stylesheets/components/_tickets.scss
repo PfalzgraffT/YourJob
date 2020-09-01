@@ -17,7 +17,7 @@
 
   h3 {
     font-size:15px;
-    margin:20px 10px;
+    margin:20px;
     text-align:justify;
   }
 
@@ -64,28 +64,37 @@
 
 .ticket-text {
   display:flex;
+  height:400px;
+
+  .text {
+    width:70%;
+  }
 
     h1 {
       margin:20px;
       color:#2f97c1;
     }
 
-    h3 {
-      color:black;
-      margin:20px;
-      font-weight:150;
-    }
-
     .testbutton1 {
       text-align:center;
       align-items:center;
+      height:300px;
+      margin-right:200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       a.btn-ghost {
       margin:20px 50px;
       text-decoration: none;
+    }
 
-      .graph1 {
-        // height:200px;
+  .radar {
+  width: 50%;
+  height:500px;
+
+    .chartjs-size-monitor {
+      position:relative;
       }
     }
   }
