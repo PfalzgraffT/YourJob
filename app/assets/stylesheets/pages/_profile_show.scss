@@ -55,6 +55,8 @@
 
     h4 {
       font-style:oblique;
+      font-size:15px;
+      font-weight:200;
     }
 }
 
@@ -173,7 +175,7 @@
         .rating__label {
             cursor: pointer;
             padding: 0 0.1em;
-            font-size: 0.5rem;
+            font-size: 1.5rem;
         }
       }
 
@@ -205,15 +207,18 @@
       display:flex;
       align-items:center;
 
+      #full-stars-rating {
+
       .rating-group {
         height:20px;
 
         .rating__label {
             cursor: pointer;
             padding: 0 0.1em;
-            font-size: 0.5rem;
+            font-size: 1.5rem;
         }
       }
+    }
 
       .skills {
         h3 {
