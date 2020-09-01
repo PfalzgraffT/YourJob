@@ -49,6 +49,7 @@
                   data-company-name="<%= @offer.recruiter.company %>"
                   data-user-skills="<%= @user_skills.to_json %>"
                   data-offer-skills="<%= @offer_skills.to_json %>"
+                  data-skill-names="<%= User::SOFT_SKILLS.to_json %>"
                   ></canvas>
         <% else %>
           <div class="link">

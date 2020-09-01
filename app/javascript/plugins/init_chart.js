@@ -5,10 +5,11 @@ const initChart = () => {
     const recruiterName = chartElement.dataset.companyName;
     const userSkills    = JSON.parse(chartElement.dataset.userSkills);
     const offerSkills   = JSON.parse(chartElement.dataset.offerSkills);
+    const skillNames    = JSON.parse(chartElement.dataset.skillNames);
     const ctx           = chartElement.getContext('2d');
     const data = {
         // The data for our dataset
-            labels: ['interpersonal_skills', 'rigor', 'independence', 'communication', 'teamwork', 'creativity', 'initiative', 'stress_management', 'perseverance', 'decision_making', 'curiosity', 'adaptability', 'enthusiam', 'flexibility', 'empathy'],
+            labels: skillNames,
             datasets: [
             {
                 label: userName,
