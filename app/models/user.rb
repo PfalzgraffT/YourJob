@@ -16,6 +16,7 @@ class User < ApplicationRecord
     flexibility
     empathy
   ]
+
   has_many :applies
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
