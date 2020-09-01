@@ -1,5 +1,5 @@
 .ticket {
-  height: 500px;
+  height: 420px;
   width:70%;
   margin-right:auto;
   margin-left:auto;
@@ -67,14 +67,12 @@
   height:400px;
 
   .radar {
-    width: 150%;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 10px;
+    width: 300%;
+    padding:20px;
   }
 
   .text {
-    width:90%;
+    width:100%;
 
     h1 {
       margin:20px;
@@ -96,8 +94,6 @@
 
   .testbutton1 {
       text-align:center;
-      align-items:center;
-      height:300px;
       // margin-right:200px;
       display: flex;
       justify-content: center;
