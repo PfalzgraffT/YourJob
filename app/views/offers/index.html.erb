@@ -34,33 +34,31 @@
 
     <div class="card-container">
       <% @offers.each do |offer| %>
-        <% if current_user.activity == offer.activity && offer.location.include?(current_user.location) && current_user.contract == offer.contract %>
-          <div class="card-product">
-            <%= cl_image_tag offer.recruiter.logo.key %><p class="bordure_verticale"></p>
-            <div class="list-details">
-              <h2><%= offer.title %></h2>
-              <h4><%= offer.recruiter.company %></h4>
-              <h5><%= offer.activity %></h5>
+        <div class="card-product">
+          <%= cl_image_tag offer.recruiter.logo.key %><p class="bordure_verticale"></p>
+          <div class="list-details">
+            <h2><%= offer.title %></h2>
+            <h4><%= offer.recruiter.company %></h4>
+            <h5><%= offer.activity %></h5>
 
-              <div class="icons-offers">
-                <i class="fas fa-map-marker-alt icon"></i>
-                <p><%= offer.location %></p>
-              </div>
-              <div class="icons-offers">
-                <i class="fas fa-file-contract icon"></i>
-                <p><%= offer.contract %></p>
-              </div>
-             </div>
-
-              <div class="testbutton">
-                <div class="compatibility">
-                  <span class="matching-percentage-js matching-percentage-css" data-percentage="<%= offer.matching_percentage %>"><%#= '%.2f' % offer.matching_percentage %></span>
-
-                </div>
-                <a class="link"><%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
+            <div class="icons-offers">
+              <i class="fas fa-map-marker-alt icon"></i>
+              <p><%= offer.location %></p>
             </div>
+            <div class="icons-offers">
+              <i class="fas fa-file-contract icon"></i>
+              <p><%= offer.contract %></p>
+            </div>
+           </div>
+
+            <div class="testbutton">
+              <div class="compatibility">
+                <span class="matching-percentage-js matching-percentage-css" data-percentage="<%= offer.matching_percentage %>"><%#= '%.2f' % offer.matching_percentage %></span>
+
+              </div>
+              <a class="link"><%= link_to "See the offer", offer_path(offer),  data: { turbolinks: false }, class:"btn-ghost" %></a>
           </div>
-        <% end %>
+        </div>
       <% end %>
       </div>
     </div>
