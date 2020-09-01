@@ -67,17 +67,32 @@
   height:400px;
 
   .radar {
-    width: 100%;
+    width: 150%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
   }
 
   .text {
-    width:50%;
-  }
+    width:90%;
 
-  h1 {
+    h1 {
       margin:20px;
       color:#2f97c1;
+      }
+
+    p {
+      margin:20px;
+      color:black;
+      text-align:justify;
     }
+
+    h3 {
+      margin:20px;
+      width:100%;
+      color:black;
+    }
+  }
 
   .testbutton1 {
       text-align:center;
