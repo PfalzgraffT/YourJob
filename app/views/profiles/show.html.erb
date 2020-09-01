@@ -313,7 +313,7 @@
     <%# offer cards %>
     <% @user.applies.each do |apply| %>
     <%# offer_applies_path(@offer.id) %>
-        <%= link_to offer_path(apply.offer_id), class: "btn-apply-card" do %>
+        <%= link_to offer_path(apply.offer_id), data:{turbolinks: false}, class: "btn-apply-card" do %>
         <div class="offer-card">
             <div class="company-logo-infos">
                 <div class="logo-company">
