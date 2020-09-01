@@ -5,15 +5,15 @@
     <title>Yourjob</title>
     -->
     <%= csrf_meta_tags %>
-    <%#= csp_meta_tag %>
-    <title><%#= meta_title %></title>
+    <%= csp_meta_tag %>
+    <title><%= meta_title %></title>
   <meta name="description" content="<%= meta_description %>">
 
   <!-- Facebook Open Graph data -->
   <meta property="og:title" content="<%= meta_title %>" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="<%= request.original_url %>" />
-  <meta property="og:image" content="<%#= meta_image %>" />
+  <meta property="og:image" og:image:width="600px" og:image:height="600px" content="<%= meta_image %>" />
   <meta property="og:description" content="<%= meta_description %>" />
   <meta property="og:site_name" content="<%= meta_title %>" />
 
@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="<%= meta_title %>">
   <meta name="twitter:description" content="<%= meta_description %>">
   <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
-  <meta name="twitter:image:src" content="<%#= meta_image %>">
+  <meta name="twitter:image:src" content="<%= meta_image %>">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
