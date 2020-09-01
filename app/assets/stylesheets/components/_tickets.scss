@@ -1,10 +1,10 @@
 .ticket {
   height: 500px;
+  width:70%;
   margin-right:auto;
   margin-left:auto;
   margin-top:20px;
   margin-bottom:10px;
-  width:70%;
   background: white;
   box-shadow: 10px 0 15px rgba(0,0,0,0.2);
   border-radius:0px 0px 0px 0px;
@@ -66,20 +66,24 @@
   display:flex;
   height:400px;
 
-  .text {
-    width:70%;
+  .radar {
+    width: 100%;
   }
 
-    h1 {
+  .text {
+    width:50%;
+  }
+
+  h1 {
       margin:20px;
       color:#2f97c1;
     }
 
-    .testbutton1 {
+  .testbutton1 {
       text-align:center;
       align-items:center;
       height:300px;
-      margin-right:200px;
+      // margin-right:200px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -87,15 +91,6 @@
       a.btn-ghost {
       margin:20px 50px;
       text-decoration: none;
-    }
-
-  .radar {
-  width: 50%;
-  height:500px;
-
-    .chartjs-size-monitor {
-      position:relative;
-      }
     }
   }
 }
