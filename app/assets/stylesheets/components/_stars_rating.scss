@@ -1,4 +1,4 @@
-#full-stars-rating {
+.full-stars-rating {
 
     /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
     .rating-group {
@@ -10,8 +10,9 @@
       
       /* hide radio inputs */
       .rating__input {
-       position: absolute !important;
-       left: -9999px !important;
+      //  position: absolute !important;
+      //  left: -9999px !important;
+        display: none;
       }
       
       /* hide 'none' input from screenreaders */
