@@ -40,14 +40,14 @@
     <div class="radar">
       <div class="testbutton1">
         <% if @already_applied %>
-          <canvas id="graph1"></canvas>
+          <canvas id="graph1" style="height:500px, width:1000px;"></canvas>
         <% else %>
           <div class="link"><%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply" %></div>
         <% end %>
        </div>
      </div>
   </div>
-
+</div>
 <div id="map"
       style="width:100%;"
       data-markers="<%= @markers.to_json %>"
