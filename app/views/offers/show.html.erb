@@ -45,17 +45,18 @@
       <div class="testbutton1">
         <% if @already_applied %>
           <canvas id="graph1"
-                  style="height:500px, width:1000px;"
                   data-user-fullname="<%= "#{@user.last_name} #{@user.first_name}" %>"
                   data-company-name="<%= @offer.recruiter.company %>"
                   data-user-skills="<%= @user_skills.to_json %>"
                   data-offer-skills="<%= @offer_skills.to_json %>"
                   ></canvas>
         <% else %>
-          <div class="link"><%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply" %></div>
+          <div class="link">
+            <%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply" %>
+          </div>
         <% end %>
-       </div>
-     </div>
+      </div>
+    </div>
   </div>
 </div>
 <div id="map"
