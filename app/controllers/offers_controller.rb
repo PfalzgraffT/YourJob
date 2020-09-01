@@ -17,7 +17,7 @@ class OffersController < ApplicationController
         lat: offer.latitude,
         lng: offer.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { offer: offer }),
-        image_url: helpers.asset_url('map_marker.svg')
+        image_url: helpers.asset_url('marker.svg')
       }
     end
   end
