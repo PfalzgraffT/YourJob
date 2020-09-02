@@ -20,10 +20,10 @@
     <div class="job-titles">
       <h2>Offer description</h2>
       <h2><%= @offer.title %></h2>
-    </div>  
+    </div>
     <div>
       <h2><%= link_to "Back", offers_path %></h2>
-    </div>  
+    </div>
   </div>
   <div class="offer">
     <div class="left">
@@ -70,7 +70,7 @@
               </div>
 
               <div class="btn-apply d-flex mt-5">
-                <%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply", :onclick => 'alert("Your application has been taken into account. While waiting for the recruiter to contact you, you can compare your skills with what the recruiter is looking for.")' %>
+                <%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply" %>
 
               </div>
             </div>
