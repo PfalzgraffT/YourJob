@@ -6,15 +6,39 @@ Recruiter.delete_all
 
 puts "Create recruiters..."
 magalie = Recruiter.new(
-    email: "magalie.laurent@example.com",
+    email: "magalie.magalie@example.com",
     password: "password",
     company: "IT Records",
 )
 magalie.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_it_records.png')), filename: 'logo_it_records.png')
 magalie.save!
 
+tom = Recruiter.new(
+    email: "tom.tom@example.com",
+    password: "password",
+    company: "Origin Dev",
+)
+tom.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_origin_dev.png')), filename: 'logo_origin_dev.png')
+tom.save!
+
+judith = Recruiter.new(
+    email: "judith.judith@example.com",
+    password: "password",
+    company: "DeView",
+)
+judith.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_deview.png')), filename: 'logo_deview.png')
+judith.save!
+
+richard = Recruiter.new(
+    email: "richard.richard@example.com",
+    password: "password",
+    company: "Design Enterprise",
+)
+richard.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_design_enterprise.png')), filename: 'logo_design_enterprise.png')
+richard.save!
+
 marcel = Recruiter.new(
-    email: "jean.marcel@example.com",
+    email: "marcel.marcel@example.com",
     password: "password",
     company: "Best Recruit",
 )
@@ -22,20 +46,36 @@ marcel.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/
 marcel.save!
 
 michel = Recruiter.new(
-    email: "michel.a@example.com",
+    email: "michel.michel@example.com",
     password: "password",
     company: "Salamanca IT solutions",
 )
 michel.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_salamanca.png')), filename: 'logo_salamanca.png')
 michel.save!
 
+tony = Recruiter.new(
+    email: "tony.tony@example.com",
+    password: "password",
+    company: "InterDev",
+)
+tony.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_interdev.png')), filename: 'logo_interdev.png')
+tony.save!
+
+nathalie = Recruiter.new(
+    email: "nathalie.nathalie@example.com",
+    password: "password",
+    company: "BackLand",
+)
+nathalie.logo.attach(io: File.open(Rails.root.join('db/fixtures/images/recruiters/logo_backland.png')), filename: 'logo_backland.png')
+nathalie.save!
+
 puts "Create offers..."
 fullstack_dev = Offer.create!(
-    title: "Fullstack dev",
+    title: "Fullstack Developer",
     activity: "Computer Science",
-    location: "Marseille",
+    location: "12 Rue Marceau, 44000 Nantes",
     contract: "Long-term",
-    description: "Join our company, We’re hiring a Junior Developer who will join our Cards and Payments Team based in Marseille. You will work with our latest technologies driving the Future of Finance.",
+    description: "Join our company, We’re hiring a Junior Developer who will join our Cards and Payments Team based in Nantes. You will work with our latest technologies driving the Future of Finance.",
     interpersonal_skills: 4,
     rigor: 4,
     independence: 3,
@@ -83,9 +123,9 @@ caregiver = Offer.create!(
 )
 
 front_dev = Offer.create!(
-    title: "Frontend dev",
+    title: "Fullstack Developer",
     activity: "Computer Science",
-    location: "Rue de strasbourg, 44000 Nantes",
+    location: "Rue de Strasbourg, 44000 Nantes",
     contract: "Long-term",
     description: "Your main responsibilities:
 
@@ -109,7 +149,7 @@ front_dev = Offer.create!(
     empathy: 1,
     latitude: 47.218133,
     longitude: -1.553029,
-    recruiter_id: magalie.id,
+    recruiter_id: tom.id,
 )
 
 cleaning_operator = Offer.create!(
@@ -140,16 +180,14 @@ cleaning_operator = Offer.create!(
 )
 
 fullstack_dev2 = Offer.create!(
-    title: "Fullstack developpeur",
+    title: "Front Developer",
     activity: "Computer Science",
-    location: "4 boulevard gustave roch, 44200 Nantes",
+    location: "4 Boulevard Gustave Roch, 44200 Nantes",
     contract: "Long-term",
-    description: " What we’re looking for:
-
-    Good hands on Java experience
-    Experience working with RESTful
-    Some experience with JavaScript
-    Exposure to Cloud Tools",
+    description: " Our team is very pleasant to live with. There is kindness and support from managers.
+    To join this team, it is necessary to be united, sharing and in a collective dynamic.
+    Lots of curiosity in HTML / CSS / JavaScript allows you to take this post with ease.
+    Motivation and the desire to learn are skills that will be greatly appreciated.",
     interpersonal_skills: 4,
     rigor: 4,
     independence: 3,
@@ -167,13 +205,13 @@ fullstack_dev2 = Offer.create!(
     empathy: 1,
     latitude: 47.205306,
     longitude: -1.54788,
-    recruiter_id: magalie.id,
+    recruiter_id: judith.id,
 )
 
 fullstack_dev3 = Offer.create!(
-    title: "Fullstack engineer",
+    title: "Fullstack Engineer",
     activity: "Computer Science",
-    location: "Nantes",
+    location: "34 Rue de Gigant, 44000 Nantes",
     contract: "Long-term",
     description: " What will you be doing?
 
@@ -200,9 +238,9 @@ fullstack_dev3 = Offer.create!(
 )
 
 front_dev2 = Offer.create!(
-    title: "Frontend developpeur",
+    title: "Fullstack Developer",
     activity: "Computer Science",
-    location: "18 boulevard de launay, 44100 Nantes",
+    location: "18 Boulevard de Launay, 44100 Nantes",
     contract: "Long-term",
     description: "You will be working on new concepts and developing existing projects that range from small start-ups to large e-commerce sites.
     Your personal Skills:
@@ -213,7 +251,7 @@ front_dev2 = Offer.create!(
     interpersonal_skills: 3,
     rigor: 2,
     independence: 3,
-    communication: 2,
+    communication: 5,
     teamwork: 5,
     creativity: 4,
     initiative: 3,
@@ -227,13 +265,13 @@ front_dev2 = Offer.create!(
     empathy: 1,
     latitude: 47.21067,
     longitude: -1.572942,
-    recruiter_id: michel.id,
+    recruiter_id: tony.id,
 )
 
 front_dev3 = Offer.create!(
-    title: "Frontend designer",
+    title: "Designer",
     activity: "Computer Science",
-    location: "12 rue de la bastille, 44000 Nantes",
+    location: "12 Rue de la Bastille, 44000 Nantes",
     contract: "Long-term",
     description: "Working closely with the team you will be responsible for taking creative design concepts into working, developed and tested live sites.",
     interpersonal_skills: 3,
@@ -253,13 +291,13 @@ front_dev3 = Offer.create!(
     empathy: 1,
     latitude: 47.218949,
     longitude: -1.564874,
-    recruiter_id: marcel.id,
+    recruiter_id: richard.id,
 )
 
 back_dev = Offer.create!(
-    title: "Back-end dev",
+    title: "Back-end Developer",
     activity: "Computer Science",
-    location: "Strasbourg",
+    location: "10 Rue Alfred Riom, 44100 Nantes",
     contract: "Long-term",
     description: "The role covers building custom modules, back-end functionality, third-party system integrations through APIs and ongoing site bug fixing.Excellent organisation and planning skills.
     Requirements :
@@ -269,7 +307,7 @@ back_dev = Offer.create!(
     interpersonal_skills: 5,
     rigor: 4,
     independence: 3,
-    communication: 3,
+    communication: 5,
     teamwork: 5,
     creativity: 1,
     initiative: 2,
@@ -278,19 +316,19 @@ back_dev = Offer.create!(
     decision_making: 3,
     curiosity: 5,
     adaptability: 3,
-    enthusiam: 2,
+    enthusiam: 3,
     flexibility: 2,
     empathy: 2,
     latitude: 48.5839200,
     longitude: 7.7455300,
-    recruiter_id: michel.id,
+    recruiter_id: nathalie.id,
 )
 
 puts "Create users..."
 john = User.new(
     first_name: "John",
     last_name: "Cena",
-    address: "11 rue la noue bras de fer, 44200 Nantes",
+    address: "11 Rue la Noue Bras de Fer, 44200 Nantes",
     phone_number: "0123456789",
     email: "john.bigmuscles@example.com",
     password: "password",
@@ -319,7 +357,7 @@ john.save!
 sophie = User.new(
     first_name: "Sophie",
     last_name: "Labo",
-    address: "1 place du capitole, 31040 Toulouse",
+    address: "1 Place du Capitole, 31040 Toulouse",
     phone_number: "1234567890",
     email: "sophie.labo@example.com",
     password: "password",
@@ -344,6 +382,35 @@ sophie = User.new(
 )
 sophie.profile_pic.attach(io: File.open(Rails.root.join('db/fixtures/images/users/sophie_profile_pic.png')), filename: 'sophie_profile_pic.png')
 sophie.save!
+
+anthony = User.new(
+    first_name: "Anthony",
+    last_name: "Mania",
+    address: "11 Rue la Noue Bras de Fer, 44200 Nantes",
+    phone_number: "06.00.00.00.00",
+    email: "anthony.mania@example.com",
+    password: "password",
+    location: "Nantes",
+    activity: "Computer Science",
+    contract: "Long-term",
+    interpersonal_skills: 3,
+    rigor: 3,
+    independence: 3,
+    communication: 2,
+    teamwork: 4,
+    creativity: 5,
+    initiative: 3,
+    stress_management: 3,
+    perseverance: 5,
+    decision_making: 2,
+    curiosity: 5,
+    adaptability: 2,
+    enthusiam: 3,
+    flexibility: 2,
+    empathy: 3,
+)
+anthony.profile_pic.attach(io: File.open(Rails.root.join('db/fixtures/images/users/anthony_profile_pic.png')), filename: 'anthony_profile_pic.png')
+anthony.save!
 
 puts "Create applications..."
 #application_dev_sophie = Apply.create!(
