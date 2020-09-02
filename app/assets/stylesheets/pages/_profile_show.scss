@@ -143,11 +143,26 @@
     border-radius:20px 0 0 0;
   }
 
+// skills and grades
+
 .tableaux {
   display:flex;
   justify-content:space-evenly;
   margin-top:30px;
+
+  h5 {
+    color: #2F97c1;
+    font-style: italic;
+  }
 }
+
+// .fa-star .orange {
+//   color: orange;
+// }
+
+// .fa-star .grey {
+//   color: grey;
+// }
 
 .tableau1 {
   margin-left: 60px;
@@ -231,6 +246,8 @@
     }
   }
 }
+
+
 
 .row {
   .col-sm-3 {

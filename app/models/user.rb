@@ -73,4 +73,8 @@ class User < ApplicationRecord
       ( (#{soft_skills_query}) / 15::decimal )
     SQL
   end
+
+  def all_skills_rated?
+    SOFT_SKILLS.all? { |soft_skill| self[soft_skill].present? }
+  end
 end

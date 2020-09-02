@@ -6,6 +6,7 @@ class ProfilesController < ApplicationController
     end
 
     def edit
+        flash[:alert] = "toto"
         @user = current_user
     end
 

@@ -1,8 +1,9 @@
 class OffersController < ApplicationController
   def index
-    # @offers = Offer.all
+    return redirect_to edit_profile_path unless current_user.all_skills_rated?
 
     @user   = current_user
+
     @offers = Offer.select('offers.*', "#{@user.matching_percentage_calc} AS matching_percentage")
                    .order('matching_percentage DESC')
                    .includes(recruiter: { logo_attachment: :blob })
