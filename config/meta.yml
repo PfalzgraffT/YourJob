@@ -1,5 +1,5 @@
 meta_product_name: "YourJob"
 meta_title: "YourJob - Your personalized job"
 meta_description: "Meet the perfect job with your own skills!"
-meta_image: "logo_yourjob_copy.png" # should exist in `app/assets/images/`
+meta_image: "logo_yourjob_redimension.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
