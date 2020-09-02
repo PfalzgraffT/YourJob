@@ -14,14 +14,14 @@ const initChart = () => {
             {
                 label: userName,
                 //backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
+                borderColor: '#2f97c1',
                 //borderWidth:
                 data: userSkills
             },
             {
                 label: recruiterName,
                 //backgroundColor: 'rgb(25, 99, 132)',
-                borderColor: 'rgb(25, 99, 132)',
+                borderColor: '#222222',
                 data: offerSkills
             }
           ]
