@@ -30,6 +30,7 @@ import { initSiema } from '../plugins/init_siema';
 
 // External imports
 import "bootstrap";
+import swal from 'sweetalert';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
