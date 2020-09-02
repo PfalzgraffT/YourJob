@@ -53,7 +53,7 @@
                   ></canvas>
         <% else %>
           <div class="link">
-            <%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply" %>
+            <%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply", :onclick => 'alert("Your application has been taken into account. While waiting for the recruiter to contact you, you can compare your skills with what the recruiter is looking for.")' %>
           </div>
         <% end %>
       </div>
