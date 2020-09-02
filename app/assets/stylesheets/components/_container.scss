@@ -63,6 +63,8 @@
 
       .log-sign {
       display:flex;
+      z-index: 100;
+      position: relative;
 
       img {
       margin: 15px;
