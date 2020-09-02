@@ -7,13 +7,19 @@
     </div>
 </div>
 
+<% unless current_user.all_skills_rated? %>
+    <div class="skills-uncomplete bg-warning text-center w-50 mx-auto py-2 rounded mt-2">
+        <h4 class="m-0 text-light">You have skills left to complete</h4>
+    </div>
+<% end %>
+
 <%# élément principal de la page %>
 <div class="page-center">
     <h2>Check your skills</h2>
     <%# carte du skill (utiliser js) %>
     <%= simple_form_for current_user, url: profile_path do |f| %>
         <div class="siema">
-            <div class="skill-card">
+            <div class="skill-card" data-skill-completed="<%= current_user.adaptability.present? %>">
                 <h3>Adaptability</h3>
                 <p>The ability to change (or be changed) to fit changed circumstances</p>
                 <%# star rating %>
@@ -30,8 +36,8 @@
                 </div>
                 <%# image du skill %>
                 <%= image_tag "adaptability.svg", class: "skill-image" %>
-            </div>
-            <div class="skill-card">
+            </div> 
+            <div class="skill-card" data-skill-completed="<%= current_user.communication.present? %>">
                 <h3>Communication</h3>
                 <p>The ability to exchange and listen informations with other individuals</p>
                 <%# star rating %>
@@ -49,7 +55,7 @@
                 <%# image du skill %>
                 <%= image_tag "communication.svg", class: "skill-image" %>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-skill-completed="<%= current_user.creativity.present? %>">
                 <h3>Creativity</h3>
                 <p>The ability to solve problems with relevance and novelty</p>
                 <%# star rating %>
