@@ -60,11 +60,29 @@
   display:flex;
   background-color:#3f3d57;
   border-radius: 5px 5px 0 0;
+  justify-content: space-between;
+
+  .job-titles {
+    display: flex;
   }
+  a {
+    color: white;
+    background-color: #575478;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  a:hover {
+    background-color: #2f97c1;
+    color: white;
+    text-decoration: none;
+  }
+}
 
 .offer {
   display:flex;
   padding: 30px;
+
   .left {
     width:50%;
 
@@ -76,6 +94,7 @@
     p {
       color:grey;
       text-align:justify;
+      margin-left: 5px;
     }
   }
   .right {
@@ -128,12 +147,12 @@
   }
 
   .testbutton1 {
-      text-align:center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      a.btn-ghost {
+    a.btn-ghost {
       margin:20px 50px;
       text-decoration: none;
       width:200px;
