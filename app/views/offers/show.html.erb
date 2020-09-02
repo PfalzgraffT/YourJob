@@ -52,7 +52,7 @@
                 <%= cl_image_tag @offer.recruiter.logo.key %>
               </div>
               <div class="btn-ghost">
-                <%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply", style:"background-color: #3f3d57;" %>
+            <%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply", :onclick => 'alert("Your application has been taken into account. While waiting for the recruiter to contact you, you can compare your skills with what the recruiter is looking for.")' %>
               </div>
             </div>
           <% end %>

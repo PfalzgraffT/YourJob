@@ -9,9 +9,12 @@
 }
 .mapboxgl-popup {
   max-width: 500px;
+  background-color: #2F97C1;
+  color: #222222;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  color: #2F97C1;
 }
