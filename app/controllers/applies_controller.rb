@@ -5,6 +5,6 @@ class AppliesController < ApplicationController
     @offer = Offer.find(params[:offer_id])
     @apply.offer = @offer
 
-    redirect_to offer_path(@offer) if @apply.save
+    redirect_to offer_path(@offer, applied: true) if @apply.save
   end
 end
