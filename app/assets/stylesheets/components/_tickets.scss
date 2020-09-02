@@ -49,6 +49,7 @@
       }
     }
   }
+
   #map {
     height:300px;
     width:100%;
@@ -60,11 +61,22 @@
   background-color:#3f3d57;
   border-radius: 5px 5px 0 0;
   }
+
 .offer {
   display:flex;
   padding: 30px;
   .left {
     width:50%;
+
+    .icons-offers {
+      display:flex;
+      margin:0;
+    }
+
+    p {
+      color:grey;
+      text-align:justify;
+    }
   }
   .right {
     flex-grow:1;

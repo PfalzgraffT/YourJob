@@ -23,10 +23,22 @@
   <div class="offer">
     <div class="left">
       <p><%= @offer.description %></p>
-      <p><%= @offer.title %></p>
-      <p><%= current_user.activity %></p>
-      <p><%= current_user.location %></p>
-      <p><%= current_user.contract %></p>
+      <div class="offer-description">
+      <ul>
+        <div class="icons-offers">
+          <i class="fas fa-business-time icon"></i>
+          <p><%= current_user.activity %></p>
+        </div>
+        <div class="icons-offers">
+          <i class="fas fa-map-marker-alt icon"></i>
+          <p><%= current_user.location %></p>
+        </div>
+        <div class="icons-offers">
+          <i class="fas fa-file-contract icon"></i>
+          <p><%= current_user.contract %></p>
+        </div>
+      </ul>
+    </div>
       <div id="map"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
