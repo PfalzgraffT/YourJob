@@ -85,14 +85,13 @@
 
         img {
           margin:150px;
-
-          height:250px;
+          height:200px;
           position: relative;
-          margin-right: 0;
+          margin-right: 10px;
         }
         .image {
           display: flex;
-          height:850px;
+          height:800px;
           position: absolute;
           top: -25px;
           right: -170px;
@@ -243,12 +242,13 @@
 }
 
 .fixed-map {
-    right:20px;
-    }
-      #map {
-      position:fixed;
+  right:20px;
+
+  #map {
+    position:fixed;
+  }
       // top:130px;
-    }
+}
 
 .homebutton {
   display:flex;

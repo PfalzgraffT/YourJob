@@ -1,18 +1,19 @@
 .ticket {
-  height: 420px;
-  width:70%;
+  height: auto;
+  width:1200px;
   margin-right:auto;
   margin-left:auto;
-  margin-top:20px;
+  margin-top:90px;
   margin-bottom:10px;
   background: white;
   box-shadow: 10px 0 15px rgba(0,0,0,0.2);
-  border-radius:0px 0px 0px 0px;
+  border-radius:5px;
 
   h2 {
     color:white;
     font-size:20px;
-    margin: 10px 0 0 30px;
+    margin: 0;
+    padding: 20px;
   }
 
   h3 {
@@ -24,7 +25,6 @@
   p.bordure_horizontale {
   width:100px;
   padding-right: 0px;
-  border-bottom: 1px solid yellow;
   }
 
   .text-draw {
@@ -49,24 +49,40 @@
       }
     }
   }
+  #map {
+    height:300px;
+    width:100%;
+  }
 }
 
 .align-titles {
   display:flex;
   background-color:#3f3d57;
-  border-radius:0px 0px 0 0;
-  // align-items:flex-end;
-  // #graph1 {
-  //   margin-top:25px;
-  //   height:100px;
-  // }
+  border-radius: 5px 5px 0 0;
   }
+.offer {
+  display:flex;
+  padding: 30px;
+  .left {
+    width:50%;
+  }
+  .right {
+    flex-grow:1;
+    padding-top: 50px;
+
+    .image-company {
+      display:flex;
+      justify-content:center;
+    }
+  }
+}
 
 .ticket-text {
-  display:flex;
   height:400px;
+  width:50%;
 
   .radar {
+    display:flex;
     width: 300%;
     padding:20px;
   }
@@ -83,6 +99,7 @@
       margin:20px;
       color:black;
       text-align:justify;
+      line-height:2rem;
     }
 
     h3 {
@@ -90,11 +107,16 @@
       width:100%;
       color:black;
     }
+    .image-company {
+      width:100px;
+      height:100px;
+      display:flex;
+      justify-content:center;
+    }
   }
 
   .testbutton1 {
       text-align:center;
-      // margin-right:200px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -102,6 +124,7 @@
       a.btn-ghost {
       margin:20px 50px;
       text-decoration: none;
+      width:200px;
     }
   }
 }

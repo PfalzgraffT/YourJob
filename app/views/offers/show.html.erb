@@ -17,52 +17,49 @@
 
 <div class="ticket">
   <div class="align-titles">
-    <h2><%= @offer.title %></h2>
-    <div class="text-draw">
-      <ul>
-        <div class="list-offer">
-          <i class="fas fa-business-time icon"></i>
-          <p><%= current_user.activity %></p>
-        </div>
-        <div class="list-offer">
-          <i class="fas fa-map-marker-alt icon"></i>
-          <p><%= current_user.location %></p>
-        </div>
-        <div class="list-offer">
-          <i class="fas fa-file-contract icon"></i>
-          <p><%= current_user.contract %></p>
-        </div>
-      </ul>
-    </div>
+    <h2>Offer description</h2>
+      <h2><%= @offer.title %></h2>
   </div>
-
-  <div class="ticket-text">
-    <div class="text">
-      <h1>Offer description</h1>
+  <div class="offer">
+    <div class="left">
       <p><%= @offer.description %></p>
+      <p><%= @offer.title %></p>
+      <p><%= current_user.activity %></p>
+      <p><%= current_user.location %></p>
+      <p><%= current_user.contract %></p>
+      <div id="map"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
-    <div class="radar">
-      <div class="testbutton1">
-        <% if @already_applied %>
-          <canvas id="graph1"
-                  data-user-fullname="<%= "#{@user.last_name} #{@user.first_name}" %>"
-                  data-company-name="<%= @offer.recruiter.company %>"
-                  data-user-skills="<%= @user_skills.to_json %>"
-                  data-offer-skills="<%= @offer_skills.to_json %>"
-                  data-skill-names="<%= User::SOFT_SKILLS.to_json %>"
-                  ></canvas>
-        <% else %>
-          <div class="link">
-            <%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply" %>
-          </div>
-        <% end %>
+    <div class="right">
+      <!-- <div class="image-company">
+        <%= cl_image_tag @offer.recruiter.logo.key %>
+      </div> -->
+      <div class="radar">
+        <div class="testbutton1">
+          <% if @already_applied %>
+            <canvas id="graph1"
+                    data-user-fullname="<%= "#{@user.last_name} #{@user.first_name}" %>"
+                    data-company-name="<%= @offer.recruiter.company %>"
+                    data-user-skills="<%= @user_skills.to_json %>"
+                    data-offer-skills="<%= @offer_skills.to_json %>"
+                    data-skill-names="<%= User::SOFT_SKILLS.to_json %>"
+                    ></canvas>
+          <% else %>
+            <div class="link">
+              <div class="image-company">
+                <%= cl_image_tag @offer.recruiter.logo.key %>
+              </div>
+              <div class="btn-ghost">
+            <%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply", :onclick => 'alert("Your application has been taken into account. While waiting for the recruiter to contact you, you can compare your skills with what the recruiter is looking for.")' %>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div id="map"
-      style="width:100%;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+
 

@@ -21,6 +21,7 @@
             <div class="user-infos">
               <p><i class="far fa-envelope"></i> <%= @user.email %></p>
               <p><i class="fas fa-map-marker-alt"></i> <%= @user.address %></p>
+              <p><i class="fas fa-phone-alt"></i> <%= @user.phone_number %></p>
             </div>
           </div>
           <h3><%= @user.activity %> -  <%= @user.contract %> - <%= @user.location %></h3>
@@ -29,7 +30,7 @@
               <h4>"I am ready to start a new challenge. I've been studying coding during two months at LeWagon and, I am a Junior Developer able to program interfaces with the
               knowledge of CSS, HTML and Ruby languages."</h4>
             </div>
-            </div>
+          </div>
 
         </div>
         <%# centre de la carte %>
@@ -346,7 +347,8 @@
                         </div>
                         <div class="border_card"></div>
                         <div class="company-infos">
-                            <h2><strong><%= apply.offer.title %></strong><p><%= apply.offer.contract %></p></h2>
+                            <h2><strong><%= apply.offer.title %></strong></h2>
+                            <p><%= apply.offer.contract %></p>
                             <h4><%= apply.offer.recruiter.company %></h4>
                             <div class="colored-text">
                                 <p><i class="fas fa-map-marker-alt icon"></i><%= apply.offer.location %></p>
