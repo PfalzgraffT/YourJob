@@ -61,7 +61,7 @@
                     <div class="skills-line" id="full-stars-rating">
                         <div class="rating-group">
                             <% if current_user.rigor.nil? %>
-                                <h5 >To complete</h5>
+                                <h5>To complete</h5>
                             <% else %>
                                 <% (1..current_user.rigor).each do |n| %>
                                     <label aria-label="<%= n %> star" class="rating__label" for="rigor-<%= n %>"><i class="rating__icon rating__icon--star fa fa-star orange" style="color: orange;"></i></label>
