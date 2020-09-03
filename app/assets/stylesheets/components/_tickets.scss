@@ -135,6 +135,9 @@
       line-height: 20px;
       font-family: "Roboto";
     }
+    .mapboxgl-popup-content p {
+      color: #2F97C1;
+    }
   }
   .right {
     flex-grow:1;
