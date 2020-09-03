@@ -23,7 +23,9 @@ class OffersController < ApplicationController
   end
 
   def show
-    @offer = Offer.find(params[:id])
+    @offer = Offer.select('offers.*', "#{current_user.matching_percentage_calc} AS matching_percentage")
+                  .where(id: params[:id])
+                  .first
     @recruiter = Recruiter.new
     @user = current_user
 

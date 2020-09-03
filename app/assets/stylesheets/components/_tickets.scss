@@ -97,6 +97,7 @@
 .offer {
   display:flex;
   padding: 25px 30px;
+  justify-content: flex-end;
 
   .left {
     width:50%;
@@ -130,7 +131,6 @@
 
     h5 {
       color: #222222;
-      margin-left: 5px;
       padding-bottom: 15px;
       line-height: 20px;
       font-family: "Roboto";
@@ -205,9 +205,8 @@
 }
 
 .offer .matching {
-  display: flex;
   position: absolute;
-  width: 86vw;
-  justify-content: flex-end;
+  width: 96px;
+  height: 96px;
   }
 
