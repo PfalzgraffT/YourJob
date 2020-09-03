@@ -16,8 +16,8 @@ const initProgressBar = () => {
       text: {
         autoStyleContainer: false
       },
-      from: { color: '#103442', width: 3 },
-      to: { color: '#2f97c1', width: 5 },
+      from: { color: '#B80022', width: 3 },
+      to: { color: '#56B35F', width: 5 },
       // Set default step function for all animate calls
       step: function(state, circle) {
         circle.path.setAttribute('stroke', state.color);
