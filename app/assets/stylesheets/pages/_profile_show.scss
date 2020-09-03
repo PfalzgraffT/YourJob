@@ -27,7 +27,7 @@
     background: white;
     margin: 10px auto 1% 1%;
     width: 65%;
-    height: 700px;
+    height: 670px;
     box-shadow: 10px 10px 25px 10px rgba(0,0,0,0.21);
     flex-direction: column;
     border-radius: 20px 20px 20px 20px;
@@ -240,7 +240,7 @@
       .rating-group {
         height:20px;
 
-        
+
         .rating__label {
             cursor: pointer;
             padding: 0 0.1em;
@@ -316,9 +316,9 @@
 
     .status-apply {
         font-style: italic;
-        text-align: right;
+        // text-align: right;
         margin-right: 5px;
-        margin-top: -15px;
+        // margin-top: 0px;
     }
   }
 }
@@ -334,12 +334,18 @@
         img {
         height: 75px;
         }
+
+        p.bordure_verticale {
+        height: 100px;
+        padding-right: 20px;
+        border-right: 1px solid black;
+  }
     }
 
     .company-infos {
       width: 100%;
         text-align: left;
-        padding-left: 7%;
+        // padding-left: 7%;
         margin-top: 5px;
         h2 {
           display: flex;
@@ -353,10 +359,10 @@
           }
         }
     }
-    .border_card {
-      border-left: solid 1px #3f3d57;
-      margin-top: 10px;
-    }
+    // .border_card {
+    //   border-left: solid 1px #3f3d57;
+    //   margin-top: 10px;
+    // }
 }
 
 .colored-text {
@@ -369,13 +375,16 @@
 
 .offer-card:hover {
     color: white;
-    background-color:#3f3d57;
+    background-color:#2F97C1;
 
     .company-infos {
         border-left-color: white;
     }
     .colored-text {
         color: white;
+    }
+    .logo-company {
+      // background-color:white;
     }
   }
 
