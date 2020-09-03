@@ -6,7 +6,7 @@ const initProgressBar = () => {
 
   matchingPercentages.forEach((matchingPercentage) => {
     const circle = new ProgressBar.Circle(matchingPercentage, {
-      color: '#2F97C1',
+      color: '#222222',
       // This has to be the same size as the maximum width to
       // prevent clipping
       strokeWidth: 4,
@@ -16,8 +16,8 @@ const initProgressBar = () => {
       text: {
         autoStyleContainer: false
       },
-      from: { color: '#FF0000', width: 3 },
-      to: { color: '#00FF00', width: 5 },
+      from: { color: '#103442', width: 3 },
+      to: { color: '#2f97c1', width: 5 },
       // Set default step function for all animate calls
       step: function(state, circle) {
         circle.path.setAttribute('stroke', state.color);
