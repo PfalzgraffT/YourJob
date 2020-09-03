@@ -330,7 +330,11 @@
             </div>
         </div>
         <div class="testbutton profil-test-btn" style="margin-bottom: 250px;">
-            <a class="link"><%= link_to "Apply for a new job", offers_path, data:{turbolinks: false}, class:"btn-ghost"%></a>
+            <% if current_user.all_skills_rated? %>
+                <a class="link"><%= link_to "New opportunities here!", offers_path, data:{turbolinks: false}, class:"btn-ghost"%></a>
+            <% else %>
+                <a class="link"><%= link_to "Complete your registration", offers_path, data:{turbolinks: false}, class:"btn-ghost"%></a>
+            <% end %>
         </div>
     </div>
     <%# OFFRES d'emploi candidaté %>

@@ -15,25 +15,41 @@
         <p>Meet the perfect job with your own skills! YourJob is your best profile advisor!</p>
       </div>
       <div class="homebutton">
-        <a class="link"><%= link_to "Sign up", profile_path, class:"btn-ghost" %></a>
+        <% if current_user == nil %>
+          <a class="link"><%= link_to "Sign up", profile_path, class:"btn-ghost" %></a>
+        <% else %>
+          <a class="link"><%= link_to "Go to your profile", profile_path, class:"btn-ghost" %></a>
+        <% end %>
       </div>
     </div>
 
     <div class="container-right">
       <div class="log-sign">
-        <div>
-          <%= link_to image_tag("access_account.svg"), profile_path %>
-          <h3><%= link_to "Login", profile_path %></h3>
-        </div>
+        <% if current_user == nil %>
+          <div>
+            <%= link_to image_tag("access_account.svg"), profile_path %>
+            <h3><%= link_to "Login", profile_path %></h3>
+          </div>
 
-        <div>
-          <%= link_to image_tag("sign_up.svg"), profile_path %>
-          <h3><%= link_to "Sign up", profile_path %></h3>
-        </div>
+          <div>
+            <%= link_to image_tag("sign_up.svg"), profile_path %>
+            <h3><%= link_to "Sign up", profile_path %></h3>
+          </div>
+        <% else %>
+          <div>
+            <%= link_to image_tag("job_offers.svg"), offers_path %>
+            <h3><%= link_to "Opportunities", offers_path %></h3>
+          </div>
+          <div>
+            <%= link_to image_tag("Log_out_image.svg"), root_path %>
+            <h3><%= link_to "Sign out", destroy_user_session_path %></h3>
+          </div>
+
+        <% end %>
       </div>
       <div class="office-draw">
         <%= image_tag "fond_img_rogne.png", class: "image"%>
-      <%= image_tag "background.png" %>
+        <%= image_tag "background.png" %>
       </div>
     </div>
   </div>
