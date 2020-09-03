@@ -156,6 +156,7 @@
   }
 }
 
+
 // .fa-star .orange {
 //   color: orange;
 // }
@@ -186,7 +187,12 @@
       align-items:center;
 
       .rating-group {
-        height:20px;
+        width: 115px;
+
+        h5 {
+          display: flex;
+          justify-content: flex-end;
+        }
 
         .rating__label {
             cursor: pointer;
@@ -232,10 +238,10 @@
       display:flex;
       align-items:center;
 
-      #full-stars-rating {
+
 
       .rating-group {
-        height:20px;
+        width: 115px;
 
 
         .rating__label {
@@ -244,7 +250,7 @@
             font-size: 1.5rem;
         }
       }
-    }
+
 
       .skills {
         h3 {
