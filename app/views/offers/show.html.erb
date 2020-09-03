@@ -61,8 +61,8 @@
       <div class="radar">
         <div class="testbutton1">
           <% if @already_applied %>
+            <h3 style="color: #222222;"><strong>Compare your personality with the offer</strong></h3>
             <canvas id="graph1"
-
                     data-user-fullname="<%= "#{@user.last_name} #{@user.first_name}" %>"
                     data-company-name="<%= @offer.recruiter.company %>"
                     data-user-skills="<%= @user_skills.to_json %>"
