@@ -70,12 +70,12 @@
 
       .log-sign {
           display: flex;
-    z-index: 100;
-    margin-top: 30PX;
-    /* margin-left: 255px; */
-    margin-bottom: 20px;
-    /* width: 300px; */
-    justify-content: flex-end;
+          z-index: 100;
+          margin-top: 30PX;
+          /* margin-left: 255px; */
+          margin-bottom: 20px;
+          /* width: 300px; */
+          justify-content: flex-end;
 
       img {
       height:50px;
@@ -153,7 +153,6 @@
       font-family:'Roboto';
       font-weight:bold;
       margin-right:20px;
-
       }
 
       img {
@@ -263,7 +262,7 @@
   #map {
     position:fixed;
   }
-      // top:130px;
+  // top:130px;
 }
 
 .homebutton {
@@ -275,7 +274,6 @@
   a.btn-ghost {
     margin:150px 0px 30px 10px;
     text-decoration: none;
-
   }
 }
 
@@ -288,4 +286,4 @@
     margin-left: 140px;
     font-weight: bold;
     font-size: 20px;
-}
+  }
