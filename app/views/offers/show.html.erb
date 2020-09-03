@@ -18,8 +18,9 @@
 <div class="ticket">
   <div class="align-titles">
     <div class="job-titles">
-      <h2>Offer description</h2>
       <h2><%= @offer.title %></h2>
+      <h2>/</h2>
+      <h2><%= @offer.recruiter.company %></h2>
     </div>
     <div>
       <h2><%= link_to "Back", offers_path %></h2>
