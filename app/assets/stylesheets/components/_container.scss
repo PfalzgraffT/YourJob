@@ -131,7 +131,7 @@
 
   .offer-description {
     position:sticky;
-    top: 80px;
+    top: 60px;
     z-index:10;
       ul {
         color:white;
@@ -142,8 +142,9 @@
         // margin-top:20px;
         list-style-type:none;
         display:flex;
-        justify-content:space-between;
+        justify-content:space-around;
         background-color:#2f97c1;
+        padding: 0px;
 
 
       p {
@@ -252,6 +253,11 @@
 
 .flex-container {
   display:flex;
+  .background {
+
+  background-image: none;
+  }
+
   // right:0;
   // top:0;
 }

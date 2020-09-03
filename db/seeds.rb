@@ -184,7 +184,8 @@ fullstack_dev2 = Offer.create!(
     activity: "Computer Science",
     location: "4 Boulevard Gustave Roch, 44200 Nantes",
     contract: "Long-term",
-    description: " Our team is very pleasant to live with. There is kindness and support from managers.
+    description: " Our team is very pleasant to live with.
+    There is kindness and support from managers.
     To join this team, it is necessary to be united, sharing and in a collective dynamic.
     Lots of curiosity in HTML / CSS / JavaScript allows you to take this post with ease.
     Motivation and the desire to learn are skills that will be greatly appreciated.",
