@@ -9,10 +9,12 @@
     h2 {
         color: #2f97c1;
         font-weight: bold;
-        // text-align: left;
+        text-align: right;
+        margin-right: 20px;
     }
 
     h3 {
+        font-size: 30px;
         font-weight: bold;
         color: white;
     }
@@ -25,6 +27,28 @@
     button {
         margin-top: 2%;
     }
+
+    .btns-next-prev {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.btn-pn {
+    color:white;
+    background-color:#3f3d57;
+    font-family:'Roboto';
+    font-weight:bold;
+    text-align:center;
+    border-radius:20px;
+    padding: 7px 15px;
+    width:140px;
+    text-decoration: none;
+}
+.btn-pn:hover {
+    color: white;
+    background-color:#2f97c1;
+    text-decoration: none;
 }
 
 // skill card basics (for stars rating see stars_rating.scss)
@@ -47,7 +71,7 @@
         width: 250px;
         height: 200px;
         position: relative;
-        left: -290px;
+        left: -280px;
         bottom: 180px;
     }
 }

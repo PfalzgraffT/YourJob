@@ -77,4 +77,8 @@ class User < ApplicationRecord
   def all_skills_rated?
     SOFT_SKILLS.all? { |soft_skill| self[soft_skill].present? }
   end
+
+  # def last_skill?
+  #   SOFT_SKILLS.last
+  # end
 end

@@ -210,6 +210,15 @@
   // }
 }
 
+
+.rating-group label {
+          margin-bottom: 0px !important;
+        }
+
+.skills h3 {
+  margin-top: 10px;
+}
+
 .tableau2 {
   display: flex;
   flex-direction: column;
@@ -228,6 +237,7 @@
       .rating-group {
         height:20px;
 
+        
         .rating__label {
             cursor: pointer;
             padding: 0 0.1em;
