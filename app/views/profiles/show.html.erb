@@ -329,7 +329,7 @@
                 </div>
             </div>
         </div>
-        <div class="testbutton profil-test-btn" style="margin-bottom: 250px;">
+        <div class="testbutton profil-test-btn" >
             <% if current_user.all_skills_rated? %>
                 <a class="link"><%= link_to "Apply for a new job", offers_path, data:{turbolinks: false}, class:"btn-ghost"%></a>
             <% else %>
@@ -340,14 +340,15 @@
     <%# OFFRES d'emploi candidaté %>
     <div class="applications-column">
         <h3>Applications</h3>
-        <div>
+        <div class="scroll-offers">
           <% if @user.applies.blank? %>
             <h4 class="sentence">No pending applications.<br>Check out the offers that match your personality.<br>Recruiters are waiting to hear from you, <%= @user.first_name %>.</h4 class="sentence">
           <% else %>
             <%# offer cards %>
-            <% @user.applies.each do |apply| %>
+              <% @user.applies.each do |apply| %>
             <%# offer_applies_path(@offer.id) %>
-                <%= link_to offer_path(apply.offer_id), data:{turbolinks: false}, class: "btn-apply-card" do %>
+
+                  <%= link_to offer_path(apply.offer_id), data:{turbolinks: false}, class: "btn-apply-card" do %>
                     <div class="offer-card">
                         <div class="company-logo-infos">
                             <div class="logo-company">
