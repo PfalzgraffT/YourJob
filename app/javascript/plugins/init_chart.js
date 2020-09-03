@@ -2,7 +2,7 @@ const initChart = () => {
   const chartElement    = document.getElementById('graph1');
   if (chartElement) {
     const userName      = chartElement.dataset.userFullname;
-    const recruiterName = chartElement.dataset.companyName;
+    const offerTitle = chartElement.dataset.offerTitle;
     const userSkills    = JSON.parse(chartElement.dataset.userSkills);
     const offerSkills   = JSON.parse(chartElement.dataset.offerSkills);
     const skillNames    = JSON.parse(chartElement.dataset.skillNames);
@@ -19,7 +19,7 @@ const initChart = () => {
                 data: userSkills
             },
             {
-                label: recruiterName,
+                label: offerTitle,
                 //backgroundColor: 'rgb(25, 99, 132)',
                 borderColor: '#222222',
                 data: offerSkills

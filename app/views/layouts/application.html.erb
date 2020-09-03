@@ -56,8 +56,11 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   </head>
-
+<% if current_page?(offers_path) %>
+  <body>
+<% else %>
   <body class="background" style="background-image: url(<%= image_path "fond.png" %>)">
+<% end %>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 

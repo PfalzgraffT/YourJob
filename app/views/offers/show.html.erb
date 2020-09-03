@@ -22,11 +22,12 @@
       <h4><%= @offer.title %></h4>
     </div>
     <div>
-      <h2><%= link_to "Back", offers_path %></h2>
+      <h2><%= link_to "Back", offers_path, data: { turbolinks: false } %></h2>
     </div>
   </div>
   <div class="offer">
-      <span class="matching">MATCHING PERCENTAGE</span>
+    <span class="matching-percentage-js matching-percentage-css matching" data-percentage="<%= @offer.matching_percentage %>"><%#= '%.2f' % offer.matching_percentage %></span>
+
     <div class="left">
       <div class="caracteristic">
         <%= cl_image_tag @offer.recruiter.logo.key, class:"image-company-show"%>
@@ -34,15 +35,15 @@
         <ul>
         <div class="icons-offers">
           <i class="fas fa-business-time icon"></i>
-          <p><%= current_user.activity %></p>
+          <p><%= @offer.activity %></p>
         </div>
         <div class="icons-offers">
           <i class="fas fa-map-marker-alt icon" style="margin-right:7px;"></i>
-          <p><%= current_user.location %></p>
+          <p><%= @offer.location %></p>
         </div>
         <div class="icons-offers">
           <i class="fas fa-file-contract icon" style="margin-right:7px;"></i>
-          <p><%= current_user.contract %></p>
+          <p><%= @offer.contract %></p>
         </div>
         </ul>
       </div>
@@ -61,9 +62,10 @@
       <div class="radar">
         <div class="testbutton1">
           <% if @already_applied %>
+            <h3 style="color: #222222;"><strong>Compare your personality with the offer</strong></h3>
             <canvas id="graph1"
                     data-user-fullname="<%= "#{@user.last_name} #{@user.first_name}" %>"
-                    data-company-name="<%= @offer.recruiter.company %>"
+                    data-offer-title="<%= @offer.title %>"
                     data-user-skills="<%= @user_skills.to_json %>"
                     data-offer-skills="<%= @offer_skills.to_json %>"
                     data-skill-names="<%= User::SOFT_SKILLS.to_json %>"
@@ -71,8 +73,8 @@
           <% else %>
             <div class="link">
 
-              <h3>To access the graph and thus compare your personality</h3>
-              <h3>to that sought by the recruiter for this job, <strong>you must apply</strong>.</h3>
+              <h3>You will discover your detailed matching of soft skills</h3>
+              <h3>related to what the recruiter is looking for after <strong>your application</strong>.</h3>
 
               <div class="btn-apply d-flex mt-5">
                 <%= link_to "Apply", offer_applies_path(@offer.id),method: :post, class:"btn-ghost", id: "apply" %>
