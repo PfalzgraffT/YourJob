@@ -62,6 +62,7 @@
         <div class="testbutton1">
           <% if @already_applied %>
             <canvas id="graph1"
+
                     data-user-fullname="<%= "#{@user.last_name} #{@user.first_name}" %>"
                     data-company-name="<%= @offer.recruiter.company %>"
                     data-user-skills="<%= @user_skills.to_json %>"
