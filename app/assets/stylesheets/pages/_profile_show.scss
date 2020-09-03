@@ -71,6 +71,7 @@
 
     .quote {
         align-self: flex-end;
+        margin-top:33px;
         margin-left:20px;
         // margin-top: 20px;
         border-left: solid 4px #2F97C1;
@@ -272,6 +273,7 @@
   max-height: calc(100vh - 0rem);
   margin: auto;
   margin-top:-8px;
+  width:350px;
 
   h3 {
     position:sticky;
@@ -397,7 +399,7 @@
   align-items: center;
   height: 70vh;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 50px;
   color: grey;
   font-family: "Roboto";
