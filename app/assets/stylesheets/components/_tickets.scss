@@ -96,17 +96,17 @@
 
 .offer {
   display:flex;
-  padding: 15px 30px;
+  padding: 25px 30px;
 
   .left {
     width:50%;
 
     .caracteristic {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       font-weight: bold;
       font-family: "Roboto";
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       height: 76px;
 
       .image-company-show {
