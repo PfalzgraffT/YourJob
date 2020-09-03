@@ -15,7 +15,7 @@
 
 <%# élément principal de la page %>
 <div class="page-center">
-    <h2>Update your skills</h2>
+    <h2>Complete your skills</h2>
     <%# carte du skill (utiliser js) %>
     <%= simple_form_for current_user, url: profile_path do |f| %>
         <div class="siema">
@@ -76,15 +76,14 @@
         </div>
 
         <%# boutton pour passer au skill suivant puis si last skill : end questions%>
-        <div>
-        <% if %>
-            <div class="btns-next-prev">
+        <div class="btns-next-prev">
+            <div class="choices">
                 <button class="prev btn-pn"><i class="fas fa-chevron-left" style="margin-right: 2px;"></i> Previous skill</button>
                 <button class="next btn-pn" style="text-align: center;">Next skill <i class="fas fa-chevron-right" style="margin-left: 2px;"></i></button>
             </div>
-        <% else %>
-            <%= f.submit "Update my profile", class: "submit btn-ghost" %>
-        <% end %>
+            <div class="btn-update btn_pn">
+                <%= f.submit "Update my profiles", class: "profile-update-btn d-none" %>
+            </div>
         </div>
     <% end %>
 </div>
