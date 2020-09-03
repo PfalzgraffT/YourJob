@@ -336,29 +336,35 @@
     <%# OFFRES d'emploi candidaté %>
     <div class="applications-column">
         <h3>Applications</h3>
-        <%# offer cards %>
-        <% @user.applies.each do |apply| %>
-        <%# offer_applies_path(@offer.id) %>
-            <%= link_to offer_path(apply.offer_id), data:{turbolinks: false}, class: "btn-apply-card" do %>
-                <div class="offer-card">
-                    <div class="company-logo-infos">
-                        <div class="logo-company">
-                            <%= cl_image_tag apply.offer.recruiter.logo.key %>
-                        </div>
-                        <div class="border_card"></div>
-                        <div class="company-infos">
-                            <h2><strong><%= apply.offer.title %></strong></h2>
-                            <p><%= apply.offer.contract %></p>
-                            <h4><%= apply.offer.recruiter.company %></h4>
-                            <div class="colored-text">
-                                <p><i class="fas fa-map-marker-alt icon"></i><%= apply.offer.location %></p>
+        <div>
+          <% if @user.applies.blank? %>
+            <h4 class="sentence">No pending applications.<br>Check out the offers that match your personality.<br>Recruiters are waiting to hear from you, <%= @user.first_name %>.</h4 class="sentence">
+          <% else %>
+            <%# offer cards %>
+            <% @user.applies.each do |apply| %>
+            <%# offer_applies_path(@offer.id) %>
+                <%= link_to offer_path(apply.offer_id), data:{turbolinks: false}, class: "btn-apply-card" do %>
+                    <div class="offer-card">
+                        <div class="company-logo-infos">
+                            <div class="logo-company">
+                                <%= cl_image_tag apply.offer.recruiter.logo.key %>
+                            </div>
+                            <div class="border_card"></div>
+                            <div class="company-infos">
+                                <h2><strong><%= apply.offer.title %></strong></h2>
+                                <p><%= apply.offer.contract %></p>
+                                <h4><%= apply.offer.recruiter.company %></h4>
+                                <div class="colored-text">
+                                    <p><i class="fas fa-map-marker-alt icon"></i><%= apply.offer.location %></p>
+                                </div>
                             </div>
                         </div>
+                        <br>
+                        <h4 class="status-apply"><strong><%= apply.status %></strong></h4>
                     </div>
-                    <br>
-                    <h4 class="status-apply"><strong><%= apply.status %></strong></h4>
-                </div>
+                <% end %>
             <% end %>
-        <% end %>
+          <% end %>
+        </div>
     </div>
 </div>
