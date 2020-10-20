@@ -1,12 +1,25 @@
-#map {
-  height:100vh;
-  // margin:30px;
-  // margin-top:100px;
-  // margin-bottom:0px;
-  // margin-right:30px;
-  // position: sticky;
-  // right: 0px;
+@media screen and (max-width: 1024px) {
+  #map {
+    height:100vh;
+    max-width: 290px;
+    // margin:30px;
+    // margin-top:100px;
+    // margin-bottom:0px;
+    // margin-right:30px;
+    // position: sticky;
+    // right: 0px;
+  }
 }
+
+#map {
+    height:100vh;
+    // margin:30px;
+    // margin-top:100px;
+    // margin-bottom:0px;
+    // margin-right:30px;
+    // position: sticky;
+    // right: 0px;
+  }
 .mapboxgl-popup {
   max-width: 500px;
   background-color: #2F97C1;
