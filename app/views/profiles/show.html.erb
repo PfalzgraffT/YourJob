@@ -329,10 +329,10 @@
                 </div>
             </div>
         </div>
-        <div class="testbutton profil-test-btn" >
+        <div class="edit-button" >
             <% if current_user.all_skills_rated? %>
+              <%= link_to image_tag('edit-button.svg', class:'btn'), edit_profile_path %>
               <a class="link"><%= link_to "Apply for a new job", offers_path, data:{turbolinks: false}, class:"btn-ghost"%></a>
-              <%= link_to image_tag('edit-button.svg', class:'btn-ghost'), edit_profile_path %>
             <% else %>
                 <a class="link"><%= link_to "Complete your registration", offers_path, data:{turbolinks: false}, class:"btn-ghost"%></a>
             <% end %>
