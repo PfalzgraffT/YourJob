@@ -1,16 +1,147 @@
+@media screen and (max-width: 1440px) {
+
+.page-center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70em;
+    text-align: center;
+    font-family: "Roboto";
+    height: 50vh;
+    // background-color: white;
+
+    h2 {
+        color: #2f97c1;
+        font-weight: bold;
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 7vh;
+    }
+
+    h3 {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+    }
+
+    p {
+        color: white;
+        font-size: 20px;
+    }
+
+    button {
+        margin-top: 2%;
+    }
+
+    .btns-next-prev {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.btn-pn {
+    color:white;
+    background-color:#3f3d57;
+    font-family:'Roboto';
+    font-weight:bold;
+    text-align:center;
+    border-radius:20px;
+    padding: 7px 15px;
+    width:140px;
+    text-decoration: none;
+}
+.btn-pn:hover {
+    color: white;
+    background-color:#2f97c1;
+    text-decoration: none;
+}
+
+.profile-update-btn {
+    color:white;
+    background-color:#3f3d57;
+    font-family:'Roboto';
+    font-weight:bold;
+    text-align:center;
+    border-radius:20px;
+    padding: 7px 15px;
+    line-height: 20px;
+    text-decoration: none;
+}
+.choices {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.btn-update {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2%;
+}
+
+// skill card basics (for stars rating see stars_rating.scss)
+.skill-card {
+    background-color: #3f3d57;
+    height: 30em;
+    padding: 5%;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 120px;
+
+    .fa-star {
+        padding-top: 20%;
+        font-size: 28px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .skill-image {
+        width: 250px;
+        height: 200px;
+        position: relative;
+        left: -350px;
+        bottom: 180px;
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+
 .page-center {
     margin-left: auto;
     margin-right: auto;
     width: 60em;
     text-align: center;
     font-family: "Roboto";
+    height: 85vh;
     // background-color: white;
-    
+
     h2 {
         color: #2f97c1;
         font-weight: bold;
         text-align: right;
         margin-right: 20px;
+        margin-top: 7vh;
     }
 
     h3 {
@@ -96,4 +227,251 @@
         left: -280px;
         bottom: 180px;
     }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 866px) {
+
+.page-center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 55em;
+    text-align: center;
+    font-family: "Roboto";
+    height: 85.2vh;
+    // background-color: white;
+
+    h2 {
+        color: #2f97c1;
+        font-weight: bold;
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 7vh;
+    }
+
+    h3 {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+    }
+
+    p {
+        color: white;
+        font-size: 20px;
+    }
+
+    button {
+        margin-top: 2%;
+    }
+
+    .btns-next-prev {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.btn-pn {
+    color:white;
+    background-color:#3f3d57;
+    font-family:'Roboto';
+    font-weight:bold;
+    text-align:center;
+    border-radius:20px;
+    padding: 7px 15px;
+    width:140px;
+    text-decoration: none;
+}
+.btn-pn:hover {
+    color: white;
+    background-color:#2f97c1;
+    text-decoration: none;
+}
+
+.profile-update-btn {
+    color:white;
+    background-color:#3f3d57;
+    font-family:'Roboto';
+    font-weight:bold;
+    text-align:center;
+    border-radius:20px;
+    padding: 7px 15px;
+    line-height: 20px;
+    text-decoration: none;
+}
+.choices {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.btn-update {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2%;
+}
+
+// skill card basics (for stars rating see stars_rating.scss)
+.skill-card {
+    background-color: #3f3d57;
+    height: 30em;
+    padding: 5%;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 120px;
+
+    .fa-star {
+        padding-top: 20%;
+        font-size: 28px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .skill-image {
+        width: 250px;
+        height: 200px;
+        position: relative;
+        left: -250px;
+        bottom: 180px;
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.page-center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    text-align: center;
+    font-family: "Roboto";
+    height: 79vh;
+    // background-color: white;
+
+    h2 {
+        color: #2f97c1;
+        font-weight: bold;
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 15vh;
+    }
+
+    h3 {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+    }
+
+    p {
+        color: white;
+        font-size: 20px;
+    }
+
+    button {
+        margin-top: 2%;
+    }
+
+    .btns-next-prev {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.btn-pn {
+    color:white;
+    background-color:#3f3d57;
+    font-family:'Roboto';
+    font-weight:bold;
+    text-align:center;
+    border-radius:20px;
+    padding: 7px 15px;
+    width:140px;
+    text-decoration: none;
+}
+.btn-pn:hover {
+    color: white;
+    background-color:#2f97c1;
+    text-decoration: none;
+}
+
+.profile-update-btn {
+    color:white;
+    background-color:#3f3d57;
+    font-family:'Roboto';
+    font-weight:bold;
+    text-align:center;
+    border-radius:20px;
+    padding: 7px 15px;
+    line-height: 20px;
+    text-decoration: none;
+}
+.choices {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.btn-update {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2%;
+}
+
+// skill card basics (for stars rating see stars_rating.scss)
+.skill-card {
+    background-color: #3f3d57;
+    height: 30em;
+    padding: 5%;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 120px;
+
+    .fa-star {
+        padding-top: 20%;
+        font-size: 28px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .skill-image {
+        width: 230px;
+        height: 200px;
+        position: relative;
+        left: -225px;
+        bottom: 180px;
+    }
+}
 }

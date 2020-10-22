@@ -1,6 +1,8 @@
+@media screen and (max-width: 1440px) {
+
 .ticket {
   height:auto;
-  width:100vw;
+  width:95vw;
   margin-right:auto;
   margin-left:auto;
   margin-top:10px;
@@ -212,4 +214,748 @@
   width: 96px;
   height: 96px;
   }
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+.ticket {
+  height:auto;
+  width:95vw;
+  margin: 4% auto;
+  background: white;
+  box-shadow: 10px 0 15px rgba(0,0,0,0.2);
+  border-radius:5px;
+
+  h2 {
+    color:white;
+    font-size:20px;
+    margin: 0;
+    padding: 20px;
+    font-weight: bolder;
+    font-family: "Roboto";
+  }
+
+  h3 {
+    color: #2F97C1;
+    font-size:15px;
+    margin:20px;
+    text-align:center;
+    font-family: "Roboto";
+  }
+  h4 {
+    color:white;
+    font-size:20px;
+    margin: 0;
+    padding: 20px;
+    font-weight: lighter;
+    font-family: "Roboto";
+  }
+
+  p.bordure_horizontale {
+  width:100px;
+  padding-right: 0px;
+  }
+
+  .text-draw {
+    margin:10px;
+    color:white;
+      i {
+        font-size:20px;
+        align-self:baseline;
+      }
+
+      p {
+        font-size:15px;
+        align-items:flex-end;
+        font-family: "Roboto";
+      }
+
+    .list-offer{
+      display: inline-flex;
+      margin-right:20px;
+
+      .icon {
+        margin-right:10px;
+      }
+    }
+  }
+
+  #map {
+    height:300px;
+    width:100%;
+  }
+}
+
+.align-titles {
+  display:flex;
+  background-color:#3f3d57;
+  border-radius: 5px 5px 0 0;
+  justify-content: space-between;
+
+  .job-titles {
+    display: flex;
+    align-items: center;
+  }
+  a {
+    color: white;
+    background-color: #575478;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: "Roboto";
+  }
+  a:hover {
+    background-color: #2f97c1;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.offer {
+  display:flex;
+  padding: 25px 30px;
+  justify-content: flex-end;
+
+  .left {
+    width:50%;
+
+    .caracteristic {
+      display: flex;
+      justify-content: flex-start;
+      font-weight: bold;
+      font-family: "Roboto";
+      margin-bottom: 35px;
+      height: 76px;
+
+      .image-company-show {
+        width: 100px;
+        height: 100px;
+        margin-right: 40px;
+      }
+
+      .border-right {
+        height: 100px;
+      }
+    }
+
+    .icons-offers {
+      display:flex;
+      margin:0;
+    }
+
+    i {
+      line-height: 1.4;
+    }
+
+    p {
+      color:grey;
+      text-align:left;
+      margin-left: 5px;
+      font-family: "Roboto";
+    }
+
+    h5 {
+      color: #222222;
+      padding-bottom: 15px;
+      line-height: 20px;
+      font-family: "Roboto";
+    }
+    .mapboxgl-popup-content p {
+      color: #2F97C1;
+    }
+  }
+  .right {
+    flex-grow:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .image-company {
+      display:flex;
+      justify-content:center;
+    }
+  }
+}
+
+.ticket-text {
+  height:400px;
+  width:50%;
+
+  .radar {
+    display:flex;
+    width: 300%;
+    padding:20px;
+  }
+
+  .text {
+    width:100%;
+
+    h1 {
+      margin:20px;
+      color:#2f97c1;
+      font-family: "Roboto";
+      }1
+
+    p {
+      margin:20px;
+      color:black;
+      text-align:justify;
+      line-height:2rem;
+      font-family: "Roboto";
+    }
+
+    h3 {
+      margin:20px;
+      width:100%;
+      color:black;
+      font-family: "Roboto";
+    }
+    .image-company {
+      width:100px;
+      height:100px;
+      display:flex;
+      justify-content:center;
+    }
+  }
+
+  .testbutton1 {
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a.btn-ghost {
+      margin:20px 50px;
+      text-decoration: none;
+      width:200px;
+    }
+  }
+}
+
+.offer .matching {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 866px) {
+
+.ticket {
+  height:auto;
+  width:95vw;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top:10px;
+  // margin-bottom:0;
+  background: white;
+  box-shadow: 10px 0 15px rgba(0,0,0,0.2);
+  border-radius:5px;
+
+  h2 {
+    color:white;
+    font-size:20px;
+    margin: 0;
+    padding: 20px;
+    font-weight: bolder;
+    font-family: "Roboto";
+  }
+
+  h3 {
+    color: #2F97C1;
+    font-size:15px;
+    margin:20px;
+    text-align:center;
+    font-family: "Roboto";
+  }
+  h4 {
+    color:white;
+    font-size:20px;
+    margin: 0;
+    padding: 20px;
+    font-weight: lighter;
+    font-family: "Roboto";
+  }
+
+  p.bordure_horizontale {
+  width:100px;
+  padding-right: 0px;
+  }
+
+  .text-draw {
+    margin:10px;
+    color:white;
+      i {
+        font-size:20px;
+        align-self:baseline;
+      }
+
+      p {
+        font-size:15px;
+        align-items:flex-end;
+        font-family: "Roboto";
+      }
+
+    .list-offer{
+      display: inline-flex;
+      margin-right:20px;
+
+      .icon {
+        margin-right:10px;
+      }
+    }
+  }
+
+  #map {
+    height:300px;
+    width:100%;
+  }
+}
+
+.align-titles {
+  display:flex;
+  background-color:#3f3d57;
+  border-radius: 5px 5px 0 0;
+  justify-content: space-between;
+
+  .job-titles {
+    display: flex;
+    align-items: center;
+  }
+  a {
+    color: white;
+    background-color: #575478;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: "Roboto";
+  }
+  a:hover {
+    background-color: #2f97c1;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.offer {
+  display:flex;
+  padding: 25px 30px;
+  justify-content: flex-end;
+
+  .left {
+    width:50%;
+
+    .caracteristic {
+      display: flex;
+      justify-content: flex-start;
+      font-weight: bold;
+      font-family: "Roboto";
+      margin-bottom: 50px;
+      height: 76px;
+
+      .image-company-show {
+        width: 80px;
+        height: 80px;
+        margin-right: 40px;
+      }
+    }
+
+    .icons-offers {
+      display:flex;
+      margin:0;
+    }
+
+    p {
+      color:grey;
+      text-align:left;
+      margin-left: 5px;
+      font-family: "Roboto";
+    }
+
+    h5 {
+      color: #222222;
+      padding-bottom: 15px;
+      line-height: 20px;
+      font-family: "Roboto";
+    }
+    .mapboxgl-popup-content p {
+      color: #2F97C1;
+    }
+  }
+  .right {
+    flex-grow:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .image-company {
+      display:flex;
+      justify-content:center;
+    }
+  }
+}
+
+.ticket-text {
+  height:400px;
+  width:50%;
+
+  .radar {
+    display:flex;
+    width: 300%;
+    padding:20px;
+  }
+
+  .text {
+    width:100%;
+
+    h1 {
+      margin:20px;
+      color:#2f97c1;
+      font-family: "Roboto";
+      }
+
+    p {
+      margin:20px;
+      color:black;
+      text-align:justify;
+      line-height:2rem;
+      font-family: "Roboto";
+    }
+
+    h3 {
+      margin:20px;
+      width:100%;
+      color:black;
+      font-family: "Roboto";
+    }
+    .image-company {
+      width:100px;
+      height:100px;
+      display:flex;
+      justify-content:center;
+    }
+  }
+
+  .testbutton1 {
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a.btn-ghost {
+      margin:20px 50px;
+      text-decoration: none;
+      width:200px;
+    }
+  }
+}
+
+.offer .matching {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.ticket {
+  height:auto;
+  width:95vw;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top:15px;
+  // margin-bottom:0;
+  background: white;
+  box-shadow: 10px 0 15px rgba(0,0,0,0.2);
+  border-radius:5px;
+
+  h2 {
+    color:white;
+    font-size:20px;
+    margin: 0;
+    padding: 20px;
+    font-weight: bolder;
+    font-family: "Roboto";
+  }
+
+  h3 {
+    color: #2F97C1;
+    font-size:15px;
+    margin:20px;
+    text-align:center;
+    font-family: "Roboto";
+  }
+  h4 {
+    color:white;
+    font-size:20px;
+    margin: 0;
+    padding: 20px;
+    font-weight: lighter;
+    font-family: "Roboto";
+  }
+
+  p.bordure_horizontale {
+  width:100px;
+  padding-right: 0px;
+  }
+
+  .text-draw {
+    margin:10px;
+    color:white;
+      i {
+        font-size:20px;
+        align-self:baseline;
+      }
+
+      p {
+        font-size:15px;
+        align-items:flex-end;
+        font-family: "Roboto";
+      }
+
+    .list-offer{
+      display: inline-flex;
+      margin-right:20px;
+
+      .icon {
+        margin-right:10px;
+      }
+    }
+  }
+
+  #map {
+    height:300px;
+    width:100%;
+  }
+}
+
+.align-titles {
+  display:flex;
+  background-color:#3f3d57;
+  border-radius: 5px 5px 0 0;
+  justify-content: space-between;
+
+  .job-titles {
+    display: flex;
+    align-items: center;
+  }
+  a {
+    color: white;
+    background-color: #575478;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: "Roboto";
+  }
+  a:hover {
+    background-color: #2f97c1;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.offer {
+  display:flex;
+  padding: 25px 30px;
+  justify-content: flex-end;
+
+  .left {
+    width:50%;
+
+    .caracteristic {
+      display: flex;
+      justify-content: flex-start;
+      font-weight: bold;
+      font-family: "Roboto";
+      margin-bottom: 78px;
+      height: 76px;
+      margin-top: 14px;
+
+      .image-company-show {
+        width: 80px;
+        height: 80px;
+        margin-right: 40px;
+      }
+    }
+
+    .icons-offers {
+      display:flex;
+      margin:0;
+    }
+
+    p {
+      color:grey;
+      text-align:left;
+      margin-left: 5px;
+      font-family: "Roboto";
+    }
+
+    h5 {
+      color: #222222;
+      padding-bottom: 70px;
+      line-height: 20px;
+      font-family: "Roboto";
+    }
+    .mapboxgl-popup-content p {
+      color: #2F97C1;
+    }
+  }
+  .right {
+    flex-grow:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .image-company {
+      display:flex;
+      justify-content:center;
+    }
+  }
+}
+
+.ticket-text {
+  height:400px;
+  width:50%;
+
+  .radar {
+    display:flex;
+    width: 300%;
+    padding:20px;
+  }
+
+  .text {
+    width:100%;
+
+    h1 {
+      margin:20px;
+      color:#2f97c1;
+      font-family: "Roboto";
+      }
+
+    p {
+      margin:20px;
+      color:black;
+      text-align:justify;
+      line-height:2rem;
+      font-family: "Roboto";
+    }
+
+    h3 {
+      margin:20px;
+      width:100%;
+      color:black;
+      font-family: "Roboto";
+    }
+    .image-company {
+      width:100px;
+      height:100px;
+      display:flex;
+      justify-content:center;
+    }
+  }
+
+  .testbutton1 {
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a.btn-ghost {
+      margin:20px 50px;
+      text-decoration: none;
+      width:200px;
+    }
+  }
+}
+
+.offer .matching {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  }
+}
