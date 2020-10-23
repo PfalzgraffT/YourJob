@@ -1,4 +1,4 @@
-@media screen and (max-width: 1440px) {
+/*@media screen and (max-width: 1440px) {
 
   .all-elements {
       display: flex;
@@ -461,7 +461,7 @@
 
 
 @media screen and (max-width: 1024px) {
-  .all-elements {
+  */.all-elements {
     display: flex;
     padding: 1%;
     height: 100vh;
@@ -880,7 +880,7 @@
   font-family: "Roboto";
 }
 
-}
+/*}
 
 
 
@@ -1803,3 +1803,4 @@
 }
 
 }
+*/
