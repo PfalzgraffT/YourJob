@@ -386,10 +386,10 @@ sophie.save!
 
 anthony = User.new(
     first_name: "Anthony",
-    last_name: "Mania",
+    last_name: "Tony",
     address: "11 Rue la Noue Bras de Fer, 44200 Nantes",
     phone_number: "06.35.15.81.32",
-    email: "anthony.mania@example.com",
+    email: "anthony.tony@example.com",
     password: "password",
     location: "Nantes",
     activity: "Computer Science",
